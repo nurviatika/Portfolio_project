@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/neck-l-sans" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+  </head>
+  <body>
+    <section
+      id="preloader"
+      class="fixed inset-0 bg-white text-black flex flex-col items-center justify-center z-100"
+    >
+      <div class="w-64 bg-[#cdf9c4] rounded-full h-3 overflow-hidden">
+        <div id="progress-bar" class="bg-[#84be78] h-3 w-0"></div>
+      </div>
+      <p id="progress-text" class="mt-4 text-lg font-satoshi font-semibold">
+        0%
+      </p>
+    </section>
+    <header
+      id="navbar"
+      class="flex justify-center mt-8 fixed md:w-fit w-full top-0 left-1/2 -translate-x-1/2 z-90"
+    >
+      <nav
+        class="bg-black flex items-center rounded-full px-3 py-3 md:max-w-[590px] max-w-[343px] w-full gap-[80px] md:justify-normal justify-between"
+      >
+        <div class="flex gap-10 items-center">
+          <div
+            class="bg-white w-[38px] h-[38px] rounded-full flex items-center justify-center"
+          >
+            <span class="text-black font-bold">D</span>
+          </div>
+
+          <ul
+            class="md:flex hidden gap-6 text-sm font-normal text-gray py-[9px] font-satoshi"
+          >
+            <li><a href="#about-me" class="hover:text-white">About Me</a></li>
+            <li><a href="#services" class="hover:text-white">Services</a></li>
+            <li><a href="#" class="hover:text-white">Support</a></li>
+            <li><a href="#" class="hover:text-white">Learning</a></li>
+          </ul>
+        </div>
+
+        <a
+          href="#"
+          class="text-white text-sm py-2 rounded-full font-medium md:flex hidden items-center gap-2 hover:text-gray transition font-plusjakarta"
+        >
+          Let’s Connect
+
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.83398 5.83337H14.1673V14.1667"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.83398 14.1667L14.1673 5.83337"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+
+        <div class="gap-1.5 pr-3 md:hidden flex">
+          <p class="text-white text-sm font-medium">Menu</p>
+          <span
+            id="menu-toggle"
+            class="flex flex-col justify-between h-5 w-5 cursor-pointer"
+          >
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+          </span>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="md:hidden fixed top-0 right-0 w-full h-[100vh] bg-black z-[99999] shadow-lg py-8 px-6 text-mediumGray text-sm font-medium transform translate-x-full transition-transform duration-700 ease-in-out"
+        >
+          <div class="flex items-center justify-between mb-8">
+            <div
+              class="bg-white w-[38px] h-[38px] rounded-full flex items-center justify-center shadow"
+            >
+              <span class="text-black font-bold">D</span>
+            </div>
+            <button id="close-menu" class="text-2xl font-bold text-white">
+              ✕
+            </button>
+          </div>
+
+          <ul class="flex flex-col gap-6 text-base font-medium text-gray">
+            <li>
+              <a href="#about-me">About Me</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Learning</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container pt-[140px] md:pb-[73px] pb-[48px]">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[720px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_white_61%)] opacity-70"
+      ></div>
+
+      <div
+        class="lg:max-w-[808px] md:max-w-[600px] w-full flex flex-col gap-8 items-center mx-auto relative z-10"
+      >
+        <div
+          class="flex rounded-full md:max-w-[334px] max-w-[306px] w-full h-[42px] py-2.5 md:px-4 px-3 bg-black/10 backdrop-blur-[25px]"
+        >
+          <p class="text-base font-medium text-black font-satoshi">
+            Hi 👋, Let’s Make a Fantastical Product
+          </p>
+        </div>
+
+        <h1
+          class="lg:text-[80px] md:text-6xl text-[32px] font-medium text-center leading-tight font-satoshi"
+        >
+          <span class="text-black"> Hi, I’m Dewangga your design partner </span>
+          <span class="text-gray-400">
+            in crafting meaningful digital experiences.
+          </span>
+        </h1>
+
+        <div
+          class="flex flex-col gap-6 lg:max-w-[432px] md:max-w-[350px] w-full items-center text-center"
+        >
+          <p
+            class="md:text-base text-lg font-normal text-gray-500 font-satoshi"
+          >
+            A
+            <span class="text-black font-medium">Product Designer</span>
+            Strategist passionate about designing seamless user journeys through
+            the power of words.
+          </p>
+
+          <button
+            class="bg-black py-3 px-[20px] max-w-[160px] w-full rounded-full"
+          >
+            <span class="text-white font-medium text-sm font-plusjakarta"
+              >Let’s Connect</span
+            >
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="flex md:justify-between justify-normal relative z-50 lg:mt-[-224px] md:mt-[-139px] mt-[-31px] md:flex-row flex-col md:gap-0 gap-[22px] items-center md:items-start"
+      >
+        <div
+          class="pt-[58px] w-full lg:max-w-[227px] md:max-w-[210px] relative"
+        >
+          <img
+            class="w-full rounded-[14px] h-full"
+            src="/public/Image-hero.png"
+            alt="image-hover"
+          />
+          <button
+            class="absolute bottom-3 left-3"
+            onclick="alert('Play Video!')"
+          >
+            <svg
+              class="md:w-[34px] md:h-[34px] w-[52px] h-[52px]"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="17" cy="17" r="17" fill="black" fill-opacity="0.25" />
+              <path
+                d="M12 11.4735C12 10.4846 13.0941 9.88728 13.9259 10.4221L22.031 15.6325C22.7964 16.1245 22.7964 17.2434 22.031 17.7354L13.9259 22.9458C13.0941 23.4806 12 22.8833 12 21.8944V11.4735Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex md:flex-col flex-row-reverse md:gap-[18px] gap-[19px]">
+          <div
+            class="rounded-full border border-faded-gray p-3.5 w-[56px] h-[56px]"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.30196 27.9999H0.351948V9.27488H6.30196V27.9999ZM3.32696 6.64988C1.40196 6.64988 0.00195312 5.24988 0.00195312 3.32488C0.00195312 1.39988 1.57696 -0.00012207 3.32696 -0.00012207C5.25196 -0.00012207 6.65196 1.39988 6.65196 3.32488C6.65196 5.24988 5.25196 6.64988 3.32696 6.64988ZM28.002 27.9999H22.052V17.8499C22.052 14.8749 20.8269 13.9999 19.0769 13.9999C17.3269 13.9999 15.5769 15.3999 15.5769 18.0249V27.9999H9.62695V9.27488H15.2269V11.8999C15.7519 10.6749 17.8519 8.74988 20.8269 8.74988C24.1519 8.74988 27.652 10.6749 27.652 16.4499V27.9999H28.002Z"
+                fill="#03040A"
+              />
+            </svg>
+          </div>
+          <div
+            class="rounded-full border border-faded-gray p-3.5 w-[56px] h-[56px]"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.9591 0.00256348C6.25272 0.00256348 0.00195312 6.25333 0.00195312 13.9597C0.00195312 20.1249 4.02642 25.3481 9.50654 27.2319C10.1916 27.3175 10.4484 26.8894 10.4484 26.5469C10.4484 26.2044 10.4484 25.3481 10.4484 24.1494C6.59523 25.0056 5.73896 22.2656 5.73896 22.2656C5.13957 20.6386 4.19767 20.2105 4.19767 20.2105C2.91327 19.3542 4.2833 19.3542 4.2833 19.3542C5.65333 19.4399 6.42397 20.8099 6.42397 20.8099C7.70838 22.9506 9.67779 22.3512 10.4484 22.0087C10.5341 21.0668 10.9622 20.4674 11.3047 20.1249C8.22214 19.7824 4.96831 18.5836 4.96831 13.1891C4.96831 11.6478 5.48208 10.449 6.42397 9.42152C6.33834 9.16464 5.82458 7.70899 6.59523 5.82519C6.59523 5.82519 7.794 5.48269 10.4484 7.28085C11.5616 6.93834 12.7604 6.85272 13.9591 6.85272C15.1579 6.85272 16.3567 7.02397 17.4698 7.28085C20.1243 5.48269 21.3231 5.82519 21.3231 5.82519C22.0937 7.70899 21.5799 9.16464 21.4943 9.50715C22.3506 10.449 22.95 11.7334 22.95 13.2747C22.95 18.6692 19.6961 19.7824 16.6136 20.1249C17.1273 20.553 17.5555 21.4093 17.5555 22.6937C17.5555 24.5775 17.5555 26.0331 17.5555 26.5469C17.5555 26.8894 17.8124 27.3175 18.4974 27.2319C24.0631 25.3481 28.002 20.1249 28.002 13.9597C27.9163 6.25333 21.6656 0.00256348 13.9591 0.00256348Z"
+                fill="#03040A"
+              />
+            </svg>
+          </div>
+          <div
+            class="rounded-full border border-faded-gray p-3.5 w-[56px] h-[56px]"
+          >
+            <svg
+              width="28"
+              height="29"
+              viewBox="0 0 28 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.002 0.333252C6.27395 0.333252 0.00195312 6.60525 0.00195312 14.3333C0.00195312 22.0613 6.27395 28.3333 14.002 28.3333C21.702 28.3333 28.002 22.0613 28.002 14.3333C28.002 6.60525 21.702 0.333252 14.002 0.333252ZM23.242 6.77325C24.922 8.81725 25.902 11.3933 25.958 14.2213C25.566 14.1373 21.618 13.3533 17.642 13.8293C17.558 13.6333 17.474 13.4093 17.39 13.2133C17.138 12.6253 16.886 12.0373 16.606 11.4773C20.974 9.71325 22.99 7.10925 23.242 6.77325ZM14.002 2.40525C17.026 2.40525 19.826 3.55325 21.926 5.40125C21.702 5.70925 19.91 8.11725 15.654 9.71325C13.694 6.10125 11.51 3.16125 11.202 2.71325C12.098 2.51725 13.022 2.40525 14.002 2.40525ZM8.90595 3.52525C9.21395 3.94525 11.342 6.91325 13.33 10.4413C7.72995 11.9253 2.80195 11.8973 2.26995 11.8973C3.08195 8.17325 5.57395 5.09325 8.90595 3.52525ZM2.04595 14.3613C2.04595 14.2493 2.04595 14.1093 2.04595 13.9973C2.54995 14.0253 8.37395 14.0813 14.338 12.2893C14.674 12.9613 15.01 13.6333 15.318 14.3333C15.178 14.3893 15.01 14.4173 14.842 14.4733C8.68195 16.4613 5.40595 21.8933 5.12595 22.3413C3.19395 20.2133 2.04595 17.4133 2.04595 14.3613ZM14.002 26.2893C11.23 26.2893 8.68195 25.3373 6.66595 23.7693C6.88995 23.3213 9.29795 18.6453 16.046 16.2933C16.074 16.2653 16.102 16.2653 16.13 16.2653C17.81 20.6333 18.51 24.2733 18.678 25.3373C17.25 25.9533 15.654 26.2893 14.002 26.2893ZM20.666 24.2453C20.554 23.5173 19.91 20.0173 18.342 15.7333C22.094 15.1453 25.37 16.1253 25.79 16.2373C25.258 19.5693 23.354 22.4533 20.666 24.2453Z"
+                fill="#03040A"
+              />
+            </svg>
+          </div>
+          <div
+            class="rounded-full border border-faded-gray w-[56px] h-[56px] flex items-center justify-center"
+          >
+            <svg
+              width="57"
+              height="57"
+              viewBox="0 0 57 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.4107 32.4153C20.4107 34.0427 19.0955 35.358 17.4681 35.358C15.8407 35.358 14.5254 34.0427 14.5254 32.4153C14.5254 30.7879 15.8407 29.4727 17.4681 29.4727H20.4107V32.4153Z"
+                fill="#03040A"
+              />
+              <path
+                d="M21.877 32.4153C21.877 30.7879 23.1922 29.4727 24.8196 29.4727C26.447 29.4727 27.7623 30.7879 27.7623 32.4153V39.772C27.7623 41.3994 26.447 42.7147 24.8196 42.7147C23.1922 42.7147 21.877 41.3994 21.877 39.772V32.4153Z"
+                fill="#03040A"
+              />
+              <path
+                d="M24.8196 20.5992C23.1922 20.5992 21.877 19.2839 21.877 17.6565C21.877 16.0292 23.1922 14.7139 24.8196 14.7139C26.447 14.7139 27.7623 16.0292 27.7623 17.6565V20.5992H24.8196Z"
+                fill="#03040A"
+              />
+              <path
+                d="M24.8236 22.0928C26.451 22.0928 27.7663 23.4081 27.7663 25.0354C27.7663 26.6628 26.451 27.9781 24.8236 27.9781H17.4446C15.8172 27.9781 14.502 26.6628 14.502 25.0354C14.502 23.4081 15.8172 22.0928 17.4446 22.0928H24.8236Z"
+                fill="#03040A"
+              />
+              <path
+                d="M36.6133 25.0354C36.6133 23.4081 37.9286 22.0928 39.556 22.0928C41.1833 22.0928 42.4986 23.4081 42.4986 25.0354C42.4986 26.6628 41.1833 27.9781 39.556 27.9781H36.6133V25.0354Z"
+                fill="#03040A"
+              />
+              <path
+                d="M35.1471 25.0355C35.1471 26.6629 33.8318 27.9782 32.2044 27.9782C30.577 27.9782 29.2617 26.6629 29.2617 25.0355V17.6565C29.2617 16.0292 30.577 14.7139 32.2044 14.7139C33.8318 14.7139 35.1471 16.0292 35.1471 17.6565V25.0355Z"
+                fill="#03040A"
+              />
+              <path
+                d="M32.2044 36.8291C33.8318 36.8291 35.1471 38.1444 35.1471 39.7718C35.1471 41.3992 33.8318 42.7145 32.2044 42.7145C30.577 42.7145 29.2617 41.3992 29.2617 39.7718V36.8291H32.2044Z"
+                fill="#03040A"
+              />
+              <path
+                d="M32.2044 35.358C30.577 35.358 29.2617 34.0427 29.2617 32.4153C29.2617 30.7879 30.577 29.4727 32.2044 29.4727H39.5834C41.2108 29.4727 42.5261 30.7879 42.5261 32.4153C42.5261 34.0427 41.2108 35.358 39.5834 35.358H32.2044Z"
+                fill="#03040A"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="container flex items-center md:gap-[40px] gap-8 justify-center py-6"
+    >
+      <div class="font-satoshi flex flex-col">
+        <h3 class="md:text-[40px] text-[32px] font-bold text-black">400+</h3>
+        <p class="lg:text-base md:text-sm text-xs text-gray font-normal">
+          Lates Project
+        </p>
+      </div>
+
+      <div class="font-satoshi gap- flex flex-col">
+        <h3 class="md:text-[40px] text-[32px] font-bold text-black px-[41px]">
+          22+
+        </h3>
+        <p
+          class="lg:text-base md:text-sm text-xs text-gray font-normal text-center"
+        >
+          Partnership
+        </p>
+      </div>
+
+      <div class="font-satoshi gap- flex flex-col">
+        <h3 class="md:text-[40px] text-[32px] font-bold text-black">99%</h3>
+        <p class="lg:text-base md:text-sm text-xs text-gray font-normal">
+          User Trusted
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="about-me"
+      class="container lg:pt-[100px] md:pt-20 pt-12 flex lg:flex-row flex-col lg:gap-[37px] gap-0 relative"
+    >
+      <div class="md:pt-[12px] pt-0">
+        <p class="text-sm font-medium text-black mb-4 font-plusjakarta">
+          About Me
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-[27px] lg:max-w-[753px] w-full lg:pb-[100px] pb-0"
+      >
+        <div class="flex-col gap-8 flex">
+          <h2
+            class="lg:text-[60px] lg:text-5xl md:text-[56px] text-[32px] font-medium font-satoshi leading-tight"
+          >
+            <span class="text-black">A designer who </span>
+            <span class="text-gray">blends strategy with empathy.</span>
+          </h2>
+          <p
+            class="text-base font-normal text-gray lg:max-w-[500px] max-w-[93%] w-full font-satoshi"
+          >
+            I’m Dewangga a product designer who believes that meaningful design
+            starts with understanding people. I help startups and digital teams
+            turn complexity into clarity, and ideas into intuitive, scalable
+            products.
+          </p>
+        </div>
+
+        <div class="flex md:gap-4 gap-2">
+          <div
+            class="relative lg:max-w-[144px] md:max-w-[230px] w-full h-full rounded-xl overflow-hidden shadow-md"
+          >
+            <img
+              src="/public/card1.png"
+              alt="Card Image"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 px-2 pb-2 pt-5 md:gap-1.5 gap-[5px] flex flex-col bg-gradient-to-t from-black/80"
+            >
+              <p
+                class="text-white lg:text-[7px] md:text-xs text-[6px] font-medium font-satoshi"
+              >
+                HealthDoc - UI KIT Website
+              </p>
+              <p
+                class="text-gray-300 lg:text-[6px] md:text-[8px] text-[5px] font-normal font-satoshi"
+              >
+                Whether you’re launching a product or refining one...
+              </p>
+              <div class="flex flex-row gap-1">
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  UI/UX Design
+                </button>
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  Website Design
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative lg:max-w-[144px] md:max-w-[230px] w-full h-full rounded-xl overflow-hidden shadow-md"
+          >
+            <img
+              src="/public/card2.png"
+              alt="Card Image"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 px-2 pb-2 pt-5 md:gap-1.5 gap-[5px] flex flex-col bg-gradient-to-t from-black/80"
+            >
+              <p
+                class="text-white lg:text-[7px] md:text-xs text-[6px] font-medium font-satoshi"
+              >
+                RumahTara - UI KIT Application
+              </p>
+              <p
+                class="text-gray-300 lg:text-[6px] md:text-[8px] text-[5px] font-normal font-satoshi"
+              >
+                Whether you’re launching a product or refining one...
+              </p>
+              <div class="flex flex-row gap-1">
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  UI/UX Design
+                </button>
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  App Design
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative lg:max-w-[144px] md:max-w-[230px] w-full h-full rounded-xl overflow-hidden shadow-md"
+          >
+            <img
+              src="/public/card3.png"
+              alt="Card Image"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 px-2 pb-2 pt-5 md:gap-1.5 gap-[5px] flex flex-col bg-gradient-to-t from-black/80"
+            >
+              <p
+                class="text-white lg:text-[7px] md:text-xs text-[6px] font-medium font-satoshi"
+              >
+                MyCrypto App - UI KIT Application
+              </p>
+              <p
+                class="text-gray-300 lg:text-[6px] md:text-[8px] text-[5px] font-normal font-satoshi"
+              >
+                Whether you’re launching a product or refining one...
+              </p>
+              <div class="flex flex-row gap-1">
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  UI/UX Design
+                </button>
+                <button
+                  class="py-[2px] px-[3px] lg:text-[5px] md:text-[8px] text-[4px] text-white border border-rd-gray rounded-full text-center font-medium font-satoshi"
+                >
+                  App Design
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-wrap md:gap-3 gap-1.5 lg:max-w-[440px] md:max-w-[467px] w-full"
+        >
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              Website Design
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              App Design
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              UI/UX Design
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              Dashboard
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              Saas
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              Web3
+            </span>
+          </button>
+          <button
+            class="border border-gray-300 md:py-1 py-1.5 md:px-3 px-4 rounded-2xl"
+          >
+            <span class="text-black text-sm font-medium font-satoshi">
+              B2B
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:absolute [position:unset] right-[-41px]">
+        <img
+          src="/public/image-about.png"
+          alt="Dewangga"
+          class="w-full max-w-[576px] lg:-translate-y-[51px] translate-y-0"
+        />
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="lg:pt-[100px] md:pt-[75px] pt-10 md:pb-[75px] pb-10 bg-black relative"
+    >
+      <img
+        class="absolute w-full bg-cover"
+        src="/public/bg-Abstracts.png"
+        alt=""
+      />
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[720px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_black_37%)] opacity-35"
+      ></div>
+
+      <div class="container flex flex-col items-center relative">
+        <div class="max-w-[568px] w-full flex flex-col">
+          <p
+            class="text-sm font-medium text-white text-center font-plusjakarta"
+          >
+            Services
+          </p>
+          <div class="text-center flex flex-col gap-8">
+            <p
+              class="lg:text-[60px] md:text-[55px] text-[32px] font-medium text-white font-satoshi leading-[110%]"
+            >
+              Let’s bring your ideas to life.
+            </p>
+            <p class="font-normal text-base text-gray font-satoshi">
+              Whether you’re launching a product or refining one, I provide
+              design services that drive results:
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col pt-[60px] gap-8">
+          <div
+            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+          >
+            <div
+              class="rounded-3xl bg-black flex md:flex-row flex-col lg:gap-[41px] gap-6 justify-between"
+            >
+              <div
+                class="flex flex-col max-w-[495px] w-full lg:pl-[60px] md:pl-12 pl-4 md:pr-0 pr-4 md:pb-[50px] pb-6 justify-between md:pt-[50px] pt-4"
+              >
+                <div class="flex flex-col">
+                  <p
+                    class="text-white font-medium lg:text-[40px] md:text-[32px] text-2xl font-satoshi"
+                  >
+                    UI/UX Design
+                  </p>
+                  <p class="text-base font-normal text-gray font-satoshi">
+                    Whether you’re launching a product or refining one, I
+                    provide design services that drive results:
+                  </p>
+                </div>
+                <div class="pt-6 md:pt-0">
+                  <button
+                    class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                  >
+                    <span
+                      class="text-black font-medium text-sm font-plusjakarta"
+                      >Detail Services</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="lg:max-w-[430px] md:max-w-[370px] w-full lg:pr-[79px] md:pr-8 pr-[47px] pl-[46px] md:pl-8 lg:pl-0"
+                src="/public/Mockup (1).png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+          >
+            <div
+              class="rounded-3xl bg-black flex md:flex-row flex-col md:gap-[41px] gap-6 justify-between"
+            >
+              <div
+                class="flex flex-col max-w-[495px] w-full lg:pl-[60px] md:pl-12 pl-4 md:pr-0 pr-4 md:pb-[50px] pb-6 justify-between md:pt-[50px] pt-4"
+              >
+                <div class="flex flex-col">
+                  <p
+                    class="text-white font-medium md:text-[40px] text-2xl font-satoshi"
+                  >
+                    Illustration
+                  </p>
+                  <p class="text-base font-normal text-gray font-satoshi">
+                    Whether you’re launching a product or refining one, I
+                    provide design services that drive results:
+                  </p>
+                </div>
+                <div class="pt-6 md:pt-0">
+                  <button
+                    class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                  >
+                    <span
+                      class="text-black font-medium text-sm font-plusjakarta"
+                      >Detail Services</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <img
+                class="lg:max-w-[649px] md:max-w-[480px] w-full lg:pl-[71px] pl-[25px] pr-0 rounded-b-3xl md:pt-[52px] pt-0"
+                src="/public/Mockup_(2).png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+          >
+            <div
+              class="rounded-3xl bg-black flex md:flex-row flex-col md:gap-[41px] gap-[10px] justify-between"
+            >
+              <div
+                class="flex flex-col max-w-[495px] w-full lg:pl-[60px] md:pl-12 pl-4 md:pr-0 pr-4 md:pb-[50px] pb-6 justify-between md:pt-[50px] pt-4"
+              >
+                <div class="flex flex-col">
+                  <p
+                    class="text-white font-medium md:text-[40px] text-2xl font-satoshi"
+                  >
+                    Illustration
+                  </p>
+                  <p class="text-base font-normal text-gray font-satoshi">
+                    Whether you’re launching a product or refining one, I
+                    provide design services that drive results:
+                  </p>
+                </div>
+                <div class="pt-6 md:pt-0">
+                  <button
+                    class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                  >
+                    <span
+                      class="text-black font-medium text-sm font-plusjakarta"
+                      >Detail Services</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <img
+                class="lg:w-[589px] md:max-w-[480px] lg:pl-[90px] md:pl-[40px] pl-6 pr-0 lg:pt-[45px] md:pt-1.5 pt-0 translate-y-[39px]"
+                src="/public/Mockup_(3).png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container md:pt-[100px] pt-7 pb-[40px] lg:pb-[105px]">
+      <div class="flex lg:flex-row flex-col md:pb-[80px] pb-6">
+        <div class="flex gap-6 flex-col">
+          <p class="text-sm font-medium text-black font-plusjakarta">
+            Our Latest Work
+          </p>
+          <p class="font-medium md:text-[60px] text-[32px] font-satoshi">
+            <span class="text-black">Designs tha </span>
+            <span class="text-gray">speak Products that perform</span>
+          </p>
+        </div>
+        <p
+          class="text-base font-normal lg:pt-[158px] pt-6 font-satoshi text-gray"
+        >
+          Whether you’re launching a product or refining one, I provide design
+          services that drive results:
+        </p>
+      </div>
+      <div
+        class="flex lg:gap-2 gap-6 md:pb-[61px] pb-6 items-center lg:flex-row flex-col"
+      >
+        <div
+          class="relative lg:max-w-[384px] md:max-w-[600px] w-full h-full rounded-xl overflow-hidden shadow-md"
+        >
+          <img
+            src="/public/card1.png"
+            alt="Card Image"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute bottom-0 pl-[19px] pr-2 pb-6 pt-5 gap-4 flex flex-col bg-gradient-to-t from-black/80"
+          >
+            <p class="text-white text-[20px] font-medium font-satoshi">
+              RumahTara - UI KIT Application
+            </p>
+            <p class="text-gray text-base font-normal font-satoshi">
+              Whether you’re launching a product or refining one, I provide
+              design services that drive results:
+            </p>
+            <div class="flex flex-row gap-[12px]">
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                UI/UX Design
+              </button>
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                Website Design
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative lg:max-w-[384px] md:max-w-[600px] w-full h-full rounded-xl overflow-hidden shadow-md"
+        >
+          <img
+            src="/public/card2.png"
+            alt="Card Image"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute bottom-0 pl-[19px] pr-2 pb-6 pt-5 gap-4 flex flex-col bg-gradient-to-t from-black/80"
+          >
+            <p class="text-white text-[20px] font-medium font-satoshi">
+              MyCrypto App - UI KIT Application
+            </p>
+            <p class="text-gray text-base font-normal font-satoshi">
+              Whether you’re launching a product or refining one, I provide
+              design services that drive results:
+            </p>
+            <div class="flex flex-row gap-[12px]">
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                UI/UX Design
+              </button>
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                Website Design
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative lg:max-w-[384px] md:max-w-[600px] w-full h-full rounded-xl overflow-hidden shadow-md"
+        >
+          <img
+            src="/public/card3.png"
+            alt="Card Image"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute bottom-0 pl-[19px] pr-2 pb-6 pt-5 gap-4 flex flex-col bg-gradient-to-t from-black/80"
+          >
+            <p class="text-white text-[20px] font-medium font-satoshi">
+              HealthDoc - UI KIT Website
+            </p>
+            <p class="text-gray text-base font-normal font-satoshi">
+              Whether you’re launching a product or refining one, I provide
+              design services that drive results:
+            </p>
+            <div class="flex flex-row gap-[12px]">
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                UI/UX Design
+              </button>
+              <button
+                class="py-1.5 px-[10px] text-sm text-white border border-rd-gray rounded-full text-center font-satoshi"
+              >
+                Website Design
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          class="bg-black rounded-full text-white text-sm py-3 px-5 font-medium font-satoshi"
+        >
+          See More
+        </button>
+      </div>
+    </section>
+
+    <section class="container pt-[100px] pb-[105px] overflow-x-hidden">
+      <div class="flex lg:flex-row flex-col lg:gap-6 md:gap-8 gap-6">
+        <div
+          class="flex flex-col lg:justify-between justify-normal lg:h-[404px] h-full lg:max-w-[449px] w-full lg:gap-0 gap-8"
+        >
+          <div class="flex flex-col gap-4">
+            <p class="text-sm font-medium text-black font-plusjakarta">
+              Testimonial
+            </p>
+            <h1
+              class="md:text-[60px] text-[32px] font-medium leading-tight font-satoshi"
+            >
+              <span class="text-black"> Partnerships that </span>
+              <span class="text-gray-400"> Speak Volume </span>
+            </h1>
+          </div>
+
+          <div class="max-w-[384px] w-full">
+            <p class="text-base text-gray font-normal font-satoshi">
+              A few words from the people who’ve trusted the journey, and loved
+              the results.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-row gap-3 overflow-x-auto scroll-auto">
+          <div
+            class="bg-gray-bg max-w-[384px] w-full rounded-3xl py-6 pl-6 pr-[13px] flex flex-col gap-[71px] flex-shrink-0"
+          >
+            <div class="flex">
+              <svg
+                width="83"
+                height="36"
+                viewBox="0 0 83 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2825_759)">
+                  <path
+                    d="M22.6572 23.3002C20.3521 23.3002 18.8261 21.554 18.4004 20.8777C18.9466 16.5988 20.5449 15.246 22.6572 15.246C24.7454 15.246 26.3678 16.882 26.3678 19.273C26.3678 21.6641 24.7454 23.3002 22.6572 23.3002ZM22.6572 12.6189C18.8984 12.6189 16.7941 15.0179 16.1918 17.4876C15.5091 16.2291 15.0031 14.5459 14.6096 12.9807H9.41305V19.3124C9.41305 21.6091 8.34485 23.3081 6.25663 23.3081C4.16841 23.3081 2.9717 21.6091 2.9717 19.3124L2.99579 12.9807H0V19.3124C0 21.1608 0.610403 22.8362 1.7268 24.0317C2.87532 25.2666 4.44148 25.9115 6.25663 25.9115C9.87086 25.9115 12.3928 23.198 12.3928 19.3124V15.0572C12.7702 16.4572 13.6698 19.1472 15.3886 21.5069L13.7823 30.4657H16.8263L17.8864 24.1182C18.2318 24.4013 18.6012 24.653 18.9948 24.8812C20.0148 25.5104 21.1794 25.8644 22.3841 25.9036C22.3841 25.9036 22.5688 25.9115 22.6652 25.9115C26.3919 25.9115 29.3555 23.0879 29.3555 19.273C29.3555 15.4583 26.3839 12.6189 22.6572 12.6189Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M65.6993 14.3344V12.9815H62.7598V25.5112H65.7395V20.6032C65.7395 17.5828 66.0206 15.412 70.1568 15.6951V12.8321C68.2293 12.6905 66.7274 13.0838 65.6993 14.3344Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M45.0096 12.9817L42.8491 21.7438L40.544 12.9817H36.7531L34.44 21.7438L32.2875 12.9817H29.2676L32.5767 25.5193H36.1588L38.6485 16.6155L41.1142 25.5193H44.6963L48.1982 12.9817H45.0096Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M54.7606 23.3081C52.6403 23.3081 51.05 21.6721 51.05 19.273C51.05 16.8741 52.6484 15.246 54.7606 15.246C56.8489 15.246 58.4713 16.882 58.4713 19.273C58.4713 21.6641 56.8489 23.3081 54.7606 23.3081ZM54.7606 12.6189C51.0098 12.6189 48.0703 15.4662 48.0703 19.273C48.0703 23.0799 51.0098 25.9036 54.7606 25.9036C58.4873 25.9036 61.451 23.0799 61.451 19.273C61.451 15.4662 58.4954 12.6189 54.7606 12.6189Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M74.4292 19.3521H75.1199L79.2803 25.5186H82.6456L77.8587 18.6835C80.1799 17.7947 81.738 15.4744 81.738 12.9811H78.7662C78.7662 15.6868 76.5897 16.7093 74.4292 16.7093V8.03369H71.4414V25.5186H74.4211L74.4292 19.3521Z"
+                    fill="#A1A6B0"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2825_759">
+                    <rect
+                      width="82.5466"
+                      height="34.7565"
+                      fill="white"
+                      transform="translate(0 0.792725)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p class="text-[22px] text-black font-medium font-poppins">
+              “ Dewangga didn’t just design a product he helped us rethink how
+              users experience it. His clarity, speed, and eye for detail made
+              all the difference “
+            </p>
+            <div class="flex gap-1 flex-col">
+              <p class="text-base font-medium text-black font-poppins">
+                Lisa Maisaroh
+              </p>
+              <p class="text-base font-normal text-gray font-satoshi">
+                Product Lead at CoreLoop
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-bg max-w-[384px] w-full rounded-3xl py-6 pl-6 pr-[13px] flex flex-col gap-[71px] flex-shrink-0"
+          >
+            <div class="flex">
+              <svg
+                width="53"
+                height="36"
+                viewBox="0 0 53 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2908_772)">
+                  <path
+                    d="M3.00009 21.6863C3.22045 22.2711 3.52554 22.7711 3.9154 23.1863C4.30526 23.6016 4.76714 23.9194 5.30102 24.1398C5.83496 24.3601 6.41548 24.4703 7.04263 24.4703C7.65286 24.4703 8.22488 24.3558 8.75882 24.127C9.29276 23.8981 9.75885 23.5761 10.1572 23.1609C10.5555 22.7456 10.8648 22.2499 11.0852 21.6736C11.3055 21.0972 11.4157 20.4532 11.4157 19.7413V8.75781H14.0853V26.5551H11.4411V24.9024C10.8479 25.5295 10.1487 26.0126 9.34356 26.3517C8.53841 26.6906 7.66979 26.8601 6.73755 26.8601C5.78832 26.8601 4.90272 26.6949 4.08063 26.3643C3.2586 26.0338 2.54666 25.5635 1.94499 24.9533C1.34331 24.3431 0.86867 23.6101 0.521225 22.7541C0.173723 21.8981 0 20.9447 0 19.8938V8.75781H2.66958V19.7413C2.66958 20.4532 2.77973 21.1015 3.00009 21.6863Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M18.6869 8.75781V15.2411C19.2801 14.6478 19.9666 14.1775 20.7463 13.83C21.526 13.4825 22.3735 13.3088 23.2888 13.3088C24.238 13.3088 25.1278 13.4868 25.9583 13.8427C26.7889 14.1986 27.5092 14.6817 28.1194 15.2919C28.7296 15.9022 29.2127 16.6225 29.5687 17.453C29.9246 18.2836 30.1025 19.165 30.1025 20.0972C30.1025 21.0294 29.9246 21.9066 29.5687 22.7286C29.2127 23.5507 28.7296 24.2668 28.1194 24.877C27.5092 25.4872 26.7889 25.9703 25.9583 26.3262C25.1278 26.6821 24.2379 26.8601 23.2888 26.8601C22.3734 26.8601 21.5218 26.6864 20.7336 26.3389C19.9454 25.9914 19.2547 25.521 18.6615 24.9278V26.555H16.119V8.75781H18.6869ZM18.9793 21.8515C19.2081 22.3939 19.5259 22.8685 19.9327 23.2753C20.3395 23.6821 20.8141 24.0042 21.3565 24.2415C21.8989 24.4788 22.4837 24.5974 23.1108 24.5974C23.721 24.5974 24.2973 24.4788 24.8397 24.2415C25.382 24.0042 25.8524 23.6822 26.2508 23.2753C26.6491 22.8686 26.9669 22.3939 27.2042 21.8515C27.4415 21.3091 27.5601 20.7244 27.5601 20.0972C27.5601 19.4701 27.4415 18.881 27.2042 18.3302C26.9669 17.7793 26.6491 17.3005 26.2508 16.8937C25.8524 16.487 25.3821 16.1691 24.8397 15.9403C24.2972 15.7115 23.721 15.597 23.1108 15.597C22.5006 15.597 21.9243 15.7114 21.382 15.9403C20.8396 16.1692 20.365 16.487 19.9582 16.8937C19.5514 17.3005 19.2293 17.7793 18.992 18.3302C18.7548 18.881 18.6361 19.4701 18.6361 20.0972C18.636 20.7244 18.7505 21.3091 18.9793 21.8515Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M31.5514 17.4785C31.8904 16.6649 32.3566 15.9488 32.9498 15.3301C33.5429 14.7114 34.2464 14.2241 35.06 13.8682C35.8736 13.5122 36.755 13.3343 37.7042 13.3343C38.6364 13.3343 39.5009 13.5038 40.2975 13.8428C41.0941 14.1818 41.7806 14.6521 42.3569 15.2539C42.9332 15.8555 43.3824 16.5675 43.7044 17.3895C44.0264 18.2116 44.1874 19.1057 44.1874 20.0719V20.9109H33.6363C33.721 21.4363 33.8905 21.9236 34.1448 22.3727C34.3991 22.8219 34.7168 23.2118 35.0982 23.5423C35.4795 23.8728 35.9118 24.1313 36.3948 24.3177C36.8779 24.5042 37.3906 24.5974 37.933 24.5974C39.4755 24.5974 40.7213 23.9618 41.6705 22.6905L43.5265 24.0634C42.8824 24.9279 42.0858 25.6059 41.1366 26.0974C40.1874 26.5889 39.1196 26.8347 37.9331 26.8347C36.9669 26.8347 36.0644 26.6652 35.2254 26.3262C34.3863 25.9873 33.6575 25.5126 33.0389 24.9024C32.4202 24.2922 31.9329 23.5761 31.577 22.754C31.221 21.932 31.043 21.0379 31.043 20.0717C31.0429 19.1565 31.2125 18.292 31.5514 17.4785ZM35.1236 16.4741C34.4032 17.0759 33.9244 17.8768 33.6871 18.8768H41.5942C41.3738 17.8768 40.9035 17.0759 40.1831 16.4741C39.4627 15.8725 38.6195 15.5716 37.6534 15.5716C36.6872 15.5716 35.844 15.8725 35.1236 16.4741Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M48.9927 16.7666C48.4503 17.3598 48.1791 18.1649 48.1791 19.1819V26.5551H45.6111V13.5885H48.1536V15.1903C48.4756 14.6648 48.8952 14.2495 49.4121 13.9445C49.9291 13.6393 50.5435 13.4868 51.2554 13.4868H52.1453V15.8767H51.0774C50.23 15.8767 49.535 16.1733 48.9927 16.7666Z"
+                    fill="#A1A6B0"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2908_772">
+                    <rect
+                      width="52.1347"
+                      height="34.7565"
+                      fill="white"
+                      transform="translate(0 0.792725)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p class="text-[22px] text-black font-medium font-poppins">
+              “ Dewangga didn’t just design a product he helped us rethink how
+              users experience it. His clarity, speed, and eye for detail made
+              all the difference “
+            </p>
+            <div class="flex gap-1 flex-col">
+              <p class="text-base font-medium text-black font-poppins">
+                Lisa Maisaroh
+              </p>
+              <p class="text-base font-normal text-gray font-satoshi">
+                Product Lead at CoreLoop
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-bg max-w-[384px] w-full rounded-3xl py-6 pl-6 pr-[13px] flex flex-col gap-[71px] flex-shrink-0"
+          >
+            <div class="flex">
+              <svg
+                width="119"
+                height="36"
+                viewBox="0 0 119 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2923_2237)">
+                  <path
+                    d="M118.648 16.6025V14.5158H116.056V11.272L115.969 11.2988L113.535 12.0435L113.487 12.0581V14.516H109.646V13.1467C109.646 12.5091 109.789 12.0212 110.069 11.6958C110.348 11.3743 110.748 11.2109 111.257 11.2109C111.622 11.2109 112.001 11.2971 112.383 11.4671L112.478 11.5098V9.31229L112.433 9.29576C112.078 9.1679 111.594 9.10352 110.994 9.10352C110.238 9.10352 109.552 9.26799 108.953 9.59395C108.353 9.92037 107.882 10.3864 107.552 10.9788C107.223 11.5706 107.056 12.2541 107.056 13.0105V14.5158H105.252V16.6025H107.056V25.393H109.646V16.6025H113.487V22.1887C113.487 24.4893 114.573 25.6552 116.713 25.6552C117.064 25.6552 117.435 25.614 117.813 25.5333C118.197 25.4505 118.459 25.3677 118.614 25.2793L118.648 25.2591V23.1532L118.542 23.2229C118.402 23.3166 118.227 23.3931 118.021 23.4501C117.815 23.508 117.643 23.5371 117.51 23.5371C117.008 23.5371 116.637 23.402 116.407 23.1353C116.175 22.8663 116.056 22.3958 116.056 21.7377V16.6025H118.648ZM99.4674 23.5374C98.5272 23.5374 97.786 23.2257 97.2637 22.6116C96.7381 21.9945 96.4719 21.1146 96.4719 19.9967C96.4719 18.8433 96.7381 17.9406 97.2639 17.3126C97.7866 16.6887 98.5207 16.372 99.4462 16.372C100.344 16.372 101.059 16.6744 101.571 17.2714C102.086 17.8714 102.347 18.7669 102.347 19.9337C102.347 21.1148 102.102 22.0221 101.617 22.6291C101.136 23.2314 100.413 23.5374 99.4674 23.5374V23.5374ZM99.5825 14.2538C97.7889 14.2538 96.3643 14.7794 95.3486 15.8159C94.3335 16.8526 93.8188 18.2871 93.8188 20.0801C93.8188 21.7832 94.3212 23.153 95.3122 24.151C96.3031 25.1493 97.6517 25.655 99.3202 25.655C101.059 25.655 102.455 25.1221 103.47 24.0712C104.486 23.0215 105 21.6005 105 19.8493C105 18.1197 104.517 16.7396 103.565 15.7483C102.612 14.7565 101.272 14.2538 99.5825 14.2538V14.2538ZM89.6427 14.2538C88.4227 14.2538 87.4135 14.5659 86.6425 15.1812C85.8669 15.8002 85.4734 16.612 85.4734 17.5943C85.4734 18.105 85.5584 18.5586 85.7255 18.9433C85.8936 19.3293 86.1538 19.6691 86.4995 19.9544C86.8426 20.2373 87.3722 20.5336 88.0739 20.8351C88.6638 21.0779 89.1038 21.2832 89.3832 21.4451C89.6564 21.6037 89.8503 21.7631 89.9597 21.9184C90.0661 22.0703 90.1201 22.2783 90.1201 22.535C90.1201 23.2657 89.5728 23.6213 88.4468 23.6213C88.0291 23.6213 87.5527 23.5341 87.0308 23.3621C86.5126 23.1928 86.0236 22.9448 85.5807 22.6269L85.4732 22.5498V25.0435L85.5127 25.0618C85.8792 25.231 86.3412 25.3737 86.8858 25.4859C87.4294 25.5983 87.9233 25.6555 88.3523 25.6555C89.6763 25.6555 90.7424 25.3419 91.5204 24.7229C92.3032 24.0997 92.7 23.2687 92.7 22.2524C92.7 21.5192 92.4864 20.8905 92.0654 20.3834C91.6473 19.8804 90.9216 19.4187 89.9094 19.0106C89.103 18.6869 88.5864 18.4182 88.3732 18.212C88.1678 18.0127 88.0634 17.7309 88.0634 17.3741C88.0634 17.0578 88.1922 16.8044 88.4565 16.5991C88.7229 16.3929 89.0938 16.288 89.5588 16.288C89.9904 16.288 90.4319 16.3562 90.8711 16.4898C91.3098 16.6234 91.6953 16.8023 92.017 17.0212L92.1228 17.0935V14.728L92.0822 14.7105C91.7854 14.5832 91.394 14.4743 90.9186 14.3859C90.4454 14.2981 90.0161 14.2538 89.6427 14.2538V14.2538ZM78.7211 23.5374C77.7812 23.5374 77.0398 23.2257 76.5175 22.6116C75.9919 21.9945 75.726 21.1148 75.726 19.9967C75.726 18.8433 75.9922 17.9406 76.5181 17.3126C77.0403 16.6887 77.7743 16.372 78.7003 16.372C79.5981 16.372 80.313 16.6744 80.8253 17.2714C81.34 17.8714 81.6011 18.7669 81.6011 19.9337C81.6011 21.1148 81.3554 22.0221 80.8711 22.6291C80.39 23.2314 79.6671 23.5374 78.7211 23.5374V23.5374ZM78.8366 14.2538C77.0425 14.2538 75.6178 14.7794 74.6026 15.8159C73.5876 16.8526 73.0726 18.2871 73.0726 20.0801C73.0726 21.7839 73.5753 23.153 74.5663 24.151C75.5572 25.1493 76.9057 25.655 78.5742 25.655C80.3126 25.655 81.7092 25.1221 82.7245 24.0712C83.7394 23.0215 84.2539 21.6005 84.2539 19.8493C84.2539 18.1197 83.7712 16.7396 82.8187 15.7483C81.8657 14.7565 80.5258 14.2538 78.8366 14.2538V14.2538ZM69.1408 16.3995V14.5158H66.5823V25.3927H69.1408V19.8288C69.1408 18.8827 69.3554 18.1054 69.7786 17.5184C70.1965 16.9383 70.7534 16.6444 71.4334 16.6444C71.6638 16.6444 71.9225 16.6823 72.2027 16.7575C72.48 16.8322 72.6808 16.9134 72.7993 16.9988L72.9068 17.0767V14.4973L72.8654 14.4795C72.6271 14.3782 72.29 14.3272 71.8635 14.3272C71.2206 14.3272 70.6452 14.5338 70.1523 14.9405C69.7198 15.298 69.4071 15.7882 69.168 16.3995H69.1408ZM62.0003 14.2538C60.8265 14.2538 59.7796 14.5055 58.889 15.0017C57.9966 15.499 57.3065 16.209 56.837 17.1118C56.3695 18.0125 56.1321 19.0645 56.1321 20.2377C56.1321 21.2654 56.3623 22.2085 56.8171 23.0397C57.2722 23.8723 57.9163 24.5237 58.7317 24.9754C59.5459 25.4266 60.4869 25.6553 61.5288 25.6553C62.7448 25.6553 63.7829 25.4123 64.6153 24.9328L64.6489 24.9136V22.5695L64.5413 22.648C64.1643 22.9227 63.743 23.1419 63.2896 23.2998C62.8374 23.4576 62.4251 23.5374 62.0636 23.5374C61.0596 23.5374 60.2537 23.2233 59.6687 22.6039C59.0824 21.9838 58.7851 21.113 58.7851 20.0172C58.7851 18.9146 59.0952 18.0214 59.7061 17.3624C60.3152 16.7053 61.1227 16.372 62.1058 16.372C62.9468 16.372 63.7663 16.6567 64.5416 17.2191L64.6489 17.2971V14.8272L64.6142 14.8077C64.3225 14.6444 63.9245 14.5095 63.4305 14.4073C62.9386 14.3052 62.4575 14.2538 62.0003 14.2538V14.2538ZM54.37 14.516H51.8114V25.3927H54.37V14.516V14.516ZM53.1169 9.88238C52.6958 9.88238 52.3285 10.0257 52.0267 10.3098C51.7237 10.5947 51.5701 10.9533 51.5701 11.3766C51.5701 11.7933 51.7219 12.1454 52.022 12.4227C52.3202 12.6992 52.6886 12.8393 53.117 12.8393C53.5452 12.8393 53.915 12.6992 54.2168 12.4232C54.5205 12.1454 54.6745 11.7934 54.6745 11.3766C54.6745 10.9682 54.5246 10.6132 54.2293 10.3213C53.9342 10.03 53.5598 9.88238 53.1169 9.88238ZM46.7331 13.7135V25.3927H49.3442V10.2153H45.7303L41.1368 21.4887L36.679 10.2153H32.918V25.3926H35.3717V13.7123H35.456L40.1633 25.3927H42.015L46.6488 13.7135H46.7331V13.7135Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M12.0362 17.1798H0V5.14355H12.0362V17.1798Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M25.3251 17.1798H13.2891V5.14355H25.3251V17.1798Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M12.0359 30.4741H0V18.438H12.0359V30.4741Z"
+                    fill="#A1A6B0"
+                  />
+                  <path
+                    d="M25.3251 30.4741H13.2891V18.438H25.3251V30.4741Z"
+                    fill="#A1A6B0"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2923_2237">
+                    <rect
+                      width="118.751"
+                      height="34.7565"
+                      fill="white"
+                      transform="translate(0 0.792725)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p class="text-[22px] text-black font-medium font-poppins">
+              “ Dewangga didn’t just design a product he helped us rethink how
+              users experience it. His clarity, speed, and eye for detail made
+              all the difference “
+            </p>
+            <div class="flex gap-1 flex-col">
+              <p class="text-base font-medium text-black font-poppins">
+                Lisa Maisaroh
+              </p>
+              <p class="text-base font-normal text-gray font-satoshi">
+                Product Lead at CoreLoop
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black lg:pt-[100px] pt-10 pb-[32px]">
+      <div class="container flex flex-col gap-6">
+        <div
+          class="bg-white max-w-[38px] w-full h-[38px] rounded-full flex items-center justify-center"
+        >
+          <span class="text-black font-bold">D</span>
+        </div>
+        <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-6">
+          <div class="lg:max-w-[448px] w-full md:gap-6 gap-0 flex flex-col">
+            <div class="w-fit">
+              <p
+                class="md:text-[48px] text-[32px] font-normal text-white font-satoshi inline-block border-b-2 md:border-b-8 border-b-white"
+              >
+                Info@Dewangga.com
+              </p>
+            </div>
+
+            <div
+              class="flex md:pt-2 pt-3 md:justify-between justify-normal md:gap-0 gap-[27px] md:pb-0 pb-6"
+            >
+              <p
+                class="text-base font-normal text-white leading-[140%] max-w-[202px] w-full font-satoshi"
+              >
+                2972 Westheimer Rd. Santa Ana, Illinois 85486
+              </p>
+              <p class="text-base font-normal text-white font-satoshi">
+                +64 123 123456
+              </p>
+            </div>
+
+            <div class="flex gap-5 max-w-[156px] w-full h-[24px]">
+              <div
+                class="rounded-full border border-faded-gray p-1.5 flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 6C12 2.7 9.3 0 6 0C2.7 0 0 2.7 0 6C0 9 2.175 11.475 5.025 11.925V7.725H3.525V6H5.025V4.65C5.025 3.15 5.925 2.325 7.275 2.325C7.95 2.325 8.625 2.475 8.625 2.475V3.975H7.875C7.125 3.975 6.9 4.425 6.9 4.875V6H8.55L8.25 7.725H6.825V12C9.825 11.55 12 9 12 6Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="rounded-full border border-faded-gray px-1.5 py-[7px] flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="10"
+                  viewBox="0 0 12 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1.25C11.55 1.475 11.1 1.55 10.575 1.625C11.1 1.325 11.475 0.875 11.625 0.275C11.175 0.575 10.65 0.725 10.05 0.875C9.6 0.425 8.925 0.125 8.25 0.125C6.675 0.125 5.475 1.625 5.85 3.125C3.825 3.05 2.025 2.075 0.75 0.575C0.075 1.7 0.45 3.125 1.5 3.875C1.125 3.875 0.75 3.725 0.375 3.575C0.375 4.7 1.2 5.75 2.325 6.05C1.95 6.125 1.575 6.2 1.2 6.125C1.5 7.1 2.4 7.85 3.525 7.85C2.625 8.525 1.275 8.9 0 8.75C1.125 9.425 2.4 9.875 3.75 9.875C8.325 9.875 10.875 6.05 10.725 2.525C11.25 2.225 11.7 1.775 12 1.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="rounded-full border border-faded-gray p-1.5 flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.7 12H0.149998V3.975H2.7V12ZM1.425 2.85C0.600001 2.85 0 2.25 0 1.425C0 0.6 0.675001 0 1.425 0C2.25 0 2.85 0.6 2.85 1.425C2.85 2.25 2.25 2.85 1.425 2.85ZM12 12H9.45V7.65C9.45 6.375 8.925 6 8.175 6C7.425 6 6.675 6.6 6.675 7.725V12H4.125V3.975H6.525V5.1C6.75 4.575 7.65 3.75 8.925 3.75C10.35 3.75 11.85 4.575 11.85 7.05V12H12Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="rounded-full border border-faded-gray p-[5px] flex items-center"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.00039 1.8999C8.65039 1.8999 8.87539 1.8999 9.55039 1.8999C10.1504 1.8999 10.4504 2.0499 10.6754 2.1249C10.9754 2.2749 11.2004 2.3499 11.4254 2.5749C11.6504 2.7999 11.8004 3.0249 11.8754 3.3249C11.9504 3.5499 12.0254 3.8499 12.1004 4.4499C12.1004 5.1249 12.1004 5.2749 12.1004 6.9999C12.1004 8.7249 12.1004 8.8749 12.1004 9.5499C12.1004 10.1499 11.9504 10.4499 11.8754 10.6749C11.7254 10.9749 11.6504 11.1999 11.4254 11.4249C11.2004 11.6499 10.9754 11.7999 10.6754 11.8749C10.4504 11.9499 10.1504 12.0249 9.55039 12.0999C8.87539 12.0999 8.72539 12.0999 7.00039 12.0999C5.27539 12.0999 5.12539 12.0999 4.45039 12.0999C3.85039 12.0999 3.55039 11.9499 3.32539 11.8749C3.02539 11.7249 2.80039 11.6499 2.57539 11.4249C2.35039 11.1999 2.20039 10.9749 2.12539 10.6749C2.05039 10.4499 1.97539 10.1499 1.90039 9.5499C1.90039 8.8749 1.90039 8.7249 1.90039 6.9999C1.90039 5.2749 1.90039 5.1249 1.90039 4.4499C1.90039 3.8499 2.05039 3.5499 2.12539 3.3249C2.27539 3.0249 2.35039 2.7999 2.57539 2.5749C2.80039 2.3499 3.02539 2.1999 3.32539 2.1249C3.55039 2.0499 3.85039 1.9749 4.45039 1.8999C5.12539 1.8999 5.35039 1.8999 7.00039 1.8999ZM7.00039 0.774902C5.27539 0.774902 5.12539 0.774902 4.45039 0.774902C3.77539 0.774902 3.32539 0.924903 2.95039 1.0749C2.57539 1.2249 2.20039 1.4499 1.82539 1.8249C1.45039 2.1999 1.30039 2.4999 1.07539 2.9499C0.925391 3.3249 0.850391 3.7749 0.775391 4.4499C0.775391 5.1249 0.775391 5.3499 0.775391 6.9999C0.775391 8.7249 0.775391 8.8749 0.775391 9.5499C0.775391 10.2249 0.925391 10.6749 1.07539 11.0499C1.22539 11.4249 1.45039 11.7999 1.82539 12.1749C2.20039 12.5499 2.50039 12.6999 2.95039 12.9249C3.32539 13.0749 3.77539 13.1499 4.45039 13.2249C5.12539 13.2249 5.35039 13.2249 7.00039 13.2249C8.65039 13.2249 8.87539 13.2249 9.55039 13.2249C10.2254 13.2249 10.6754 13.0749 11.0504 12.9249C11.4254 12.7749 11.8004 12.5499 12.1754 12.1749C12.5504 11.7999 12.7004 11.4999 12.9254 11.0499C13.0754 10.6749 13.1504 10.2249 13.2254 9.5499C13.2254 8.8749 13.2254 8.6499 13.2254 6.9999C13.2254 5.3499 13.2254 5.1249 13.2254 4.4499C13.2254 3.7749 13.0754 3.3249 12.9254 2.9499C12.7754 2.5749 12.5504 2.1999 12.1754 1.8249C11.8004 1.4499 11.5004 1.2999 11.0504 1.0749C10.6754 0.924903 10.2254 0.849902 9.55039 0.774902C8.87539 0.774902 8.72539 0.774902 7.00039 0.774902Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M7.00039 3.7749C5.20039 3.7749 3.77539 5.1999 3.77539 6.9999C3.77539 8.7999 5.20039 10.2249 7.00039 10.2249C8.80039 10.2249 10.2254 8.7999 10.2254 6.9999C10.2254 5.1999 8.80039 3.7749 7.00039 3.7749ZM7.00039 9.0999C5.87539 9.0999 4.90039 8.1999 4.90039 6.9999C4.90039 5.8749 5.80039 4.8999 7.00039 4.8999C8.12539 4.8999 9.10039 5.7999 9.10039 6.9999C9.10039 8.1249 8.12539 9.0999 7.00039 9.0999Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M10.3004 4.4499C10.7146 4.4499 11.0504 4.11412 11.0504 3.6999C11.0504 3.28569 10.7146 2.9499 10.3004 2.9499C9.88618 2.9499 9.55039 3.28569 9.55039 3.6999C9.55039 4.11412 9.88618 4.4499 10.3004 4.4499Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="lg:max-w-[329px] w-full flex justify-between">
+            <div class="flex flex-col gap-6">
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Linkedin
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Upwork
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Behance
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Instagram
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-base font-medium text-white font-satoshi">
+                Let’s Work Together
+              </p>
+              <button
+                class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+              >
+                <span class="text-black font-medium text-sm font-plusjakarta"
+                  >See More</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-wrap lg:justify-between justify-center border-t border-gray pt-6 md:gap-0 gap-[10px]"
+        >
+          <p class="text-white text-sm font-normal font-plusjakarta">
+            © 2025 MyCrypto. All rights reserved.
+          </p>
+          <div class="flex gap-2 items-center">
+            <p class="text-white text-sm font-normal font-plusjakarta">
+              Privacy Policy
+            </p>
+            <svg
+              width="6"
+              height="6"
+              viewBox="0 0 6 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="3" cy="3" r="3" fill="white" fill-opacity="0.2" />
+            </svg>
+            <p class="text-white text-sm font-normal font-plusjakarta">
+              Terms & Conditions
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <img
+            class="max-w-[1200px] w-full"
+            src="/public/image-footer.png"
+            alt="dewangga"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <section
+      class="pt-[100px] pb-[75px] bg-[radial-gradient(ellipse_at_top,_rgba(32,113,0,0.6)_0%,_rgba(0,0,0,1)_13%)] relative"
+    >
+      <img
+        class="absolute w-full bg-cover"
+        src="/public/bg-Abstracts.png"
+        alt=""
+      />
+      <div class="container flex flex-col items-center">
+        <div class="max-w-[568px] w-full flex flex-col">
+          <p class="text-sm font-medium text-white text-center">Services</p>
+          <div class="text-center">
+            <p class="text-[60px] font-medium text-white">
+              Let’s bring your ideas to life.
+            </p>
+            <p class="font-normal text-base text-gray">
+              Whether you’re launching a product or refining one, I provide
+              design services that drive results:
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col pt-[60px] gap-8">
+          <div
+            class="rounded-3xl flex flex-row gap-[41px] border border-gray bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.15)_0%,_transparent_60%)] justify-between"
+          >
+            <div
+              class="flex flex-col max-w-[495px] w-full pl-[60px] py-[50px] justify-between"
+            >
+              <div class="flex flex-col">
+               <p class="text-white font-medium md:text-[40px] text-2xl font-satoshi">UI/UX Design</p>
+                <p class="text-base font-normal text-gray font-satoshi">
+                  Whether you’re launching a product or refining one, I provide
+                  design services that drive results:
+                </p>
+              </div>
+              <div class="pt-6 md:pt-0">
+                <button
+                  class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                >
+                  <span class="text-black font-medium text-sm font-plusjakarta"
+                    >Detail Services</span
+                  >
+                </button>
+              </div>
+            </div>
+            <img
+              class="w-[430px] pr-[79px]"
+              src="/public/Mockup (1).png"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="rounded-3xl flex md:flex-row flex-col md:gap-[41px] gap-6 border border-gray bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.15)_0%,_transparent_60%)] justify-between"
+          >
+            <div
+              class="flex flex-col max-w-[495px] w-full pl-[60px] pb-[50px] justify-between pt-[50px]"
+            >
+              <div class="flex flex-col">
+               <p class="text-white font-medium md:text-[40px] text-2xl font-satoshi">Illustration</p>
+                <p class="text-base font-normal text-gray font-satoshi">
+                  Whether you’re launching a product or refining one, I provide
+                  design services that drive results:
+                </p>
+              </div>
+              <div class="pt-6 md:pt-0">
+                <button
+                  class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                >
+                  <span class="text-black font-medium text-sm font-plusjakarta"
+                    >Detail Services</span
+                  >
+                </button>
+              </div>
+            </div>
+            <img
+              class="w-[649px] pl-[71px] pr-0 rounded-b-3xl object-cover translate-y-[85px]"
+              src="/public/mockup(2).png"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="rounded-3xl flex md:flex-row flex-col md:gap-[41px] gap-6 border border-gray bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.15)_0%,_transparent_60%)] justify-between"
+          >
+            <div
+              class="flex flex-col max-w-[495px] w-full pl-[60px] pb-[50px] justify-between"
+            >
+              <div class="flex flex-col">
+               <p class="text-white font-medium md:text-[40px] text-2xl font-satoshi">Illustration</p>
+                <p class="text-base font-normal text-gray font-satoshi">
+                  Whether you’re launching a product or refining one, I provide
+                  design services that drive results:
+                </p>
+              </div>
+              <div class="pt-6 md:pt-0">
+                <button
+                  class="bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+                >
+                  <span class="text-black font-medium text-sm font-plusjakarta"
+                    >Detail Services</span
+                  >
+                </button>
+              </div>
+            </div>
+            <img
+              class="w-[589px] pl-[120px] pr-0 translate-x-[120px]"
+              src="/public/mockup(3).png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+ -->
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/gsap.js"></script>
+  </body>
+</html>
