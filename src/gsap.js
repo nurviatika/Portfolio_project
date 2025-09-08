@@ -1,13 +1,14 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+// import { TextPlugin } from "gsap/TextPlugin";
+// gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 function animateHero() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#hero-p",
-      start: "top 85%",
+      start: "top 75%",
       toggleActions: "play none none none",
     },
   });
@@ -15,9 +16,30 @@ function animateHero() {
   tl.from("#hero-p", {
     y: 50,
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     ease: "power2.out",
   });
+
+  // tl.fromTo(
+  //   "h1 span:first-child",
+  //   { text: "" },
+  //   {
+  //     text: "Hi, I’m Dewangga your design partner ",
+  //     duration: 2,
+  //     ease: "none",
+  //   }
+  // );
+
+  // tl.fromTo(
+  //   "h1 span:last-child",
+  //   { text: "" },
+  //   {
+  //     text: "in crafting meaningful digital experiences.",
+  //     duration: 2,
+  //     ease: "none",
+  //   },
+  //   "+=0.2"
+  // );
 
   tl.from(
     "h1 span",
@@ -28,18 +50,18 @@ function animateHero() {
       ease: "power2.out",
       stagger: 0.2,
     },
-    "-=0.4"
+    "-=0.1"
   );
 
   tl.from(
     ".hero-desc p",
     {
-      y: 30,
+      y: 20,
       opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 0.3,
+      ease: "power1.out",
     },
-    "-=0.3"
+    "-=0.2"
   );
 
   tl.from(
@@ -47,8 +69,8 @@ function animateHero() {
     {
       y: 30,
       opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 0.5,
+      ease: "power1.out",
     },
     "-=0.2"
   );
@@ -56,9 +78,9 @@ function animateHero() {
   tl.from(
     ".flex.md\\:justify-between > div:first-child",
     {
-      x: -80,
+      x: -60,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       ease: "power2.out",
     },
     "-=0.2"
@@ -67,13 +89,13 @@ function animateHero() {
   tl.from(
     ".flex.md\\:justify-between > div:last-child > div",
     {
-      x: 80,
+      x: 60,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.out",
       stagger: 0.2,
     },
-    "-=0.6"
+    "-=0.3"
   );
 }
 
@@ -108,7 +130,7 @@ function animateCards() {
     tl.to(
       card,
       {
-        duration: 1,
+        duration: 1.3,
         x: startOffset + i * spacing,
         y: 0,
         scale: 1,
@@ -132,9 +154,9 @@ function animateCards() {
   tl.from(
     ".flex.justify-center button",
     {
-      scale: 0.8,
+      scale: 0.4,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.4,
       ease: "back.out(1.7)",
     },
     "+=0.2"
@@ -152,11 +174,11 @@ function animateCounters() {
     let obj = { val: 0 };
     gsap.to(obj, {
       val: counter.end,
-      duration: 2,
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: counter.selector,
-        start: "top 85%",
+        start: "top 75%",
         toggleActions: "play none none none",
       },
       onUpdate: () => {
@@ -171,7 +193,7 @@ function animateAboutMe() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#about-me",
-      start: "top 80%",
+      start: "top 70%",
       toggleActions: "play none none none",
     },
   });
@@ -179,7 +201,7 @@ function animateAboutMe() {
   tl.from("#about-me p.text-sm", {
     y: 40,
     opacity: 0,
-    duration: 0.8,
+    duration: 0.6,
     ease: "power2.out",
   });
 
@@ -188,7 +210,7 @@ function animateAboutMe() {
     {
       y: 60,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.6,
       ease: "power2.out",
       stagger: 0.15,
     },
@@ -200,7 +222,7 @@ function animateAboutMe() {
     {
       y: 30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.out",
     },
     "-=0.3"
@@ -211,7 +233,7 @@ function animateAboutMe() {
     {
       y: 50,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.5,
       ease: "power2.out",
       stagger: 0.2,
     },
@@ -223,22 +245,22 @@ function animateAboutMe() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.1,
     },
-    "-=0.2"
+    "-=0.1"
   );
 
   tl.from(
     "#about-me > div:last-child img",
     {
-      x: 80,
+      x: 40,
       opacity: 0,
-      duration: 1,
-      ease: "power2.out",
+      duration: 0.3,
+      ease: "power1.out",
     },
-    "-=0.4"
+    "-=0.1"
   );
 }
 
@@ -255,7 +277,7 @@ function animateServices() {
     .from("#services-section p.text-sm", {
       y: 30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.7,
       ease: "power2.out",
     })
     .from(
@@ -263,17 +285,27 @@ function animateServices() {
       {
         y: 50,
         opacity: 0,
-        duration: 1,
+        duration: 0.7,
         ease: "power2.out",
       },
       "-=0.4"
+    )
+    .from(
+      "#services-section .text-center p.font-medium",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "-=0.3"
     )
     .from(
       "#services-section .text-center p.font-normal",
       {
         y: 30,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.7,
         ease: "power2.out",
       },
       "-=0.3"
@@ -283,22 +315,43 @@ function animateServices() {
     "#services-section > div.flex.flex-col.pt-\\[60px\\] > div"
   );
 
-  cards.forEach((card) => {
+  cards.forEach((card, index) => {
     const text = card.querySelector(".flex-col.max-w-\\[495px\\]");
     const img = card.querySelector("img");
+    const reverseIndex = cards.length - 1 - index;
+
+    let targetScale = 1;
+    if (reverseIndex === 1) targetScale = 0.9;
+    if (reverseIndex >= 2) targetScale = 0.9;
+    const zIndex = index + 1;
+    gsap.fromTo(
+      card,
+      { scale: 1, zIndex: zIndex },
+      {
+        scale: targetScale,
+        duration: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
 
     gsap
       .timeline({
         scrollTrigger: {
           trigger: card,
-          start: "top 85%",
+          start: "top 75%",
           toggleActions: "play none none none",
         },
       })
       .from(card, {
         y: 60,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power3.out",
       })
       .from(
@@ -306,7 +359,7 @@ function animateServices() {
         {
           x: -60,
           opacity: 0,
-          duration: 0.8,
+          duration: 0.6,
           ease: "power2.out",
         },
         "-=0.4"
@@ -316,7 +369,7 @@ function animateServices() {
         {
           x: 60,
           opacity: 0,
-          duration: 0.8,
+          duration: 0.6,
           ease: "power2.out",
         },
         "-=0.5"
@@ -328,7 +381,7 @@ function animateLatestWork() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".flex.lg\\:flex-row.flex-col.md\\:pb-\\[80px\\]",
-      start: "top 80%",
+      start: "top 70%",
       toggleActions: "play none none none",
     },
   });
@@ -345,7 +398,7 @@ function animateLatestWork() {
     {
       y: 60,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.6,
       ease: "power3.out",
       stagger: 0.2,
     },
@@ -357,10 +410,82 @@ function animateLatestWork() {
     {
       x: 40,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.out",
     },
+    "-=0.3"
+  );
+  tl.from(
+    ".flex.lg\\:flex-row.flex-col.md\\:pb-\\[80px\\] > button",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    },
+    "-=0.2"
+  );
+}
+
+function animateTestimonial() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#testimonial-section",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  });
+
+  tl.from("#testimonial-section p.text-sm", {
+    y: 40,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power2.out",
+  });
+
+  tl.fromTo(
+    "#testimonial-section h1 span",
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.2,
+    },
     "-=0.4"
+  );
+  tl.from(
+    "#testimonial-section > div > div:first-child > p.max-w-\\[384px\\]",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.out",
+    },
+    "-=0.3"
+  );
+  tl.from(
+    "#testimonial-section .flex.gap-4 button",
+    {
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.4,
+      ease: "back.out(1.7)",
+      stagger: 0.2,
+    },
+    "-=0.2"
+  );
+  tl.from(
+    "#testimonial-section .swiper-slide",
+    {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.2,
+    },
+    "-=0.3"
   );
 }
 
@@ -368,7 +493,7 @@ function animateFooter() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "footer",
-      start: "top 80%",
+      start: "top 60%",
       toggleActions: "play none none none",
     },
   });
@@ -376,7 +501,7 @@ function animateFooter() {
   tl.from("footer .bg-white.rounded-full", {
     y: 40,
     opacity: 0,
-    duration: 0.8,
+    duration: 0.5,
     ease: "power2.out",
   });
 
@@ -385,7 +510,7 @@ function animateFooter() {
     {
       y: 40,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.out",
     },
     "-=0.4"
@@ -396,7 +521,7 @@ function animateFooter() {
     {
       y: 30,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.5,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -418,13 +543,13 @@ function animateFooter() {
   tl.from(
     "footer .lg\\:max-w-\\[329px\\] .flex-col.gap-6 p",
     {
-      x: -30,
+      x: -20,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.1,
     },
-    "-=0.2"
+    "-=0.1"
   );
 
   tl.from(
@@ -432,25 +557,29 @@ function animateFooter() {
     {
       y: 25,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.4,
       ease: "power2.out",
     },
     "-=0.2"
   );
 
-  tl.from("footer .footer-btn", {
-    y: 20,
-    // opacity: 0,
-    duration: 0.4,
-    ease: "power2.out",
-  });
+  tl.from(
+    "footer .footer-btn",
+    {
+      y: 25,
+      // opacity: 0,
+      duration: 0.4,
+      ease: "power2.out",
+    },
+    "-=0.2"
+  );
 
   tl.from(
     "footer .border-t > *",
     {
       y: 20,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -462,7 +591,7 @@ function animateFooter() {
     {
       y: 60,
       opacity: 0,
-      duration: 1,
+      duration: 0.4,
       ease: "power2.out",
     },
     "-=0.3"
@@ -479,4 +608,7 @@ document.addEventListener("preloadComplete", () => {
     animateLatestWork();
   if (document.querySelector("footer")) animateFooter();
   ScrollTrigger.refresh();
+  if (document.querySelector("#testimonial-section")) {
+    animateTestimonial();
+  }
 });

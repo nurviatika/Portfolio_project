@@ -19,7 +19,7 @@
   <body>
     <section
       id="preloader"
-      class="fixed inset-0 bg-white text-black flex items-center justify-center z-[100] overflow-hidden"
+      class="fixed inset-0 bg-[#cdf9c4] text-black flex items-center justify-center z-[100] overflow-hidden"
     >
       <div
         class="preloader-half top absolute top-0 left-0 w-full h-1/2 bg-white"
@@ -31,10 +31,21 @@
         id="progress-container"
         class="relative z-10 flex flex-col items-center"
       >
-        <div class="w-64 bg-[#cdf9c4] rounded-full h-3 overflow-hidden">
-          <div id="progress-bar" class="bg-[#84be78] h-3 w-0"></div>
+        <div
+          id="ball"
+          class="w-6 h-6 bg-[#84be78] rounded-full mb-8 relative"
+        ></div>
+        <div class="w-64 bg-[#cdf9c4] h-[2px] relative overflow-hidden">
+          <div id="progress-bar" class="bg-white h-full w-0"></div>
         </div>
-        <p id="progress-text" class="mt-4 text-lg font-satoshi font-semibold">
+
+        <!-- <div class="w-64 bg-[#cdf9c4] rounded-full h-3 overflow-hidden">
+          <div id="progress-bar" class="bg-[#84be78] h-3 w-0"></div>
+        </div> -->
+        <p
+          id="progress-text"
+          class="mt-4 text-lg font-satoshi font-semibold text-black"
+        >
           0%
         </p>
       </div>
@@ -42,7 +53,7 @@
 
     <div
       id="logo-wrapper"
-      class="fixed inset-0 flex items-center justify-center bg-white z-100 opacity-0 pointer-events-none"
+      class="fixed inset-0 flex items-center justify-center z-[100] opacity-0 pointer-events-none"
     >
       <svg
         id="logo"
@@ -59,6 +70,11 @@
           fill="#03040A"
         />
       </svg>
+      <span
+        id="text-ewangga"
+        class="text-4xl font-bold text-black font-satoshi ml-2 opacity-0 rotate-x-40 -rotate-y-4"
+        >ewangga</span
+      >
     </div>
 
     <header
@@ -622,7 +638,7 @@
 
         <div class="flex flex-col pt-[60px] gap-8">
           <div
-            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+            class="rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden sticky top-[12%]"
           >
             <img
               src="/public/bg-card-service.svg"
@@ -667,7 +683,7 @@
           </div>
 
           <div
-            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+            class="rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden sticky top-[12%]"
           >
             <img
               src="/public/bg-card-service.svg"
@@ -709,10 +725,9 @@
               />
             </div>
           </div>
-          <div></div>
 
           <div
-            class="relative rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden"
+            class="rounded-3xl p-[2px] bg-[radial-gradient(ellipse_at_left,_rgba(233,237,236,0.3)_57%,_rgba(247,285,255,0.08)_87%,_rgba(0,0,0,0.8)_100%)] overflow-hidden sticky top-[12%]"
           >
             <img
               src="/public/bg-card-service.svg"
@@ -1000,7 +1015,10 @@
       </div>
     </section>
 
-    <section class="pt-[100px] md:pb-[100px] pb-10 overflow-hidden relative">
+    <section
+      id="testimonial-section"
+      class="pt-[100px] md:pb-[100px] pb-10 overflow-hidden relative"
+    >
       <div class="container grid grid-cols-12 gap-5 relative">
         <div
           class="md:col-span-4 col-span-12 flex flex-col z-50 gap-6 md:gap-8"
@@ -1384,6 +1402,7 @@
                   />
                 </svg>
               </div>
+
               <div
                 class="rounded-full border border-faded-gray px-1.5 py-[7px] flex items-center"
               >
@@ -1442,6 +1461,7 @@
               </div>
             </div>
           </div>
+
           <div class="lg:max-w-[329px] w-full flex justify-between">
             <div class="flex flex-col gap-6">
               <p class="font-medium text-sm text-white font-plusjakarta">
