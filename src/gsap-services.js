@@ -1,32 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { TextPlugin } from "gsap/TextPlugin";
-// gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
-
-// function animateHeader() {
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#mobile-menu",
-//       start: "top 80%",
-//       toggleActions: "play none none none",
-//     },
-//   });
-
-//   tl.from("#mobile-menu", {
-//     x: -20,
-//     opacity: 0,
-//     duration: 0.6,
-//     ease: "power2.out",
-//     stagger: 0.2,
-//   });
-// }
 
 function animateHero() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#hero-p",
-      start: "top 40%",
+      start: "top 30%",
       toggleActions: "play none none none",
     },
   });
@@ -34,41 +14,20 @@ function animateHero() {
   tl.from("#hero-p", {
     y: 50,
     opacity: 0,
-    duration: 1,
+    duration: 0.6,
     ease: "power2.out",
   });
-
-  // tl.fromTo(
-  //   "h1 span:first-child",
-  //   { text: "" },
-  //   {
-  //     text: "Hi, I’m Dewangga your design partner ",
-  //     duration: 2,
-  //     ease: "none",
-  //   }
-  // );
-
-  // tl.fromTo(
-  //   "h1 span:last-child",
-  //   { text: "" },
-  //   {
-  //     text: "in crafting meaningful digital experiences.",
-  //     duration: 2,
-  //     ease: "none",
-  //   },
-  //   "+=0.2"
-  // );
 
   tl.from(
     "h1 span",
     {
-      y: 60,
+      y: 80,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.7,
       ease: "power2.out",
-      stagger: 0.2,
+      stagger: 0.1,
     },
-    "<0.2"
+    "-=0.2"
   );
 
   tl.from(
@@ -76,145 +35,91 @@ function animateHero() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.3,
-      ease: "power1.out",
-    },
-    "<0.2"
-  );
-
-  tl.from(
-    ".hero-desc button",
-    {
-      y: 30,
-      opacity: 0,
-      duration: 0.5,
-      ease: "power1.out",
-    },
-    "<0.2"
-  );
-
-  tl.from(
-    ".flex.md\\:justify-between > div:first-child",
-    {
-      x: -50,
-      opacity: 0,
       duration: 0.4,
-      ease: "power2.out",
-    },
-    "<0.3"
-  );
-
-  tl.from(
-    ".flex.md\\:justify-between > div:last-child > div",
-    {
-      x: 50,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.out",
-      stagger: 0.1,
-    },
-    "<0.2"
-  );
-}
-
-function animateCounters() {
-  const counters = [
-    { selector: ".element1 h3", end: 400, suffix: "+" },
-    { selector: "section div:nth-child(2) h3", end: 22, suffix: "+" },
-    { selector: "section div:nth-child(3) h3", end: 99, suffix: "%" },
-  ];
-
-  counters.forEach((counter) => {
-    let obj = { val: 0 };
-    gsap.to(obj, {
-      val: counter.end,
-      duration: 1,
       ease: "power1.out",
-      scrollTrigger: {
-        trigger: counter.selector,
-        start: "top 77%",
-        toggleActions: "play none none none",
-      },
-      onUpdate: () => {
-        document.querySelector(counter.selector).innerText =
-          Math.floor(obj.val) + counter.suffix;
-      },
-    });
-  });
+    },
+    "-=0.1"
+  );
 }
 
-function animateAboutMe() {
+function animateServicesNow() {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: "#about-me",
-      start: "top 50%",
+      trigger: "#servicesNow-section",
+      start: "top 40%",
       toggleActions: "play none none none",
+      markers: true,
     },
-  });
-
-  tl.from("#about-me p.text-sm", {
-    x: -40,
-    opacity: 0,
-    duration: 0.6,
-    ease: "power2.out",
   });
 
   tl.from(
-    "#about-me h2 span",
+    "#servicesNow-section .card-one",
     {
-      y: 60,
+      y: 40,
       opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-      stagger: 0.15,
+      duration: 0.8,
+      ease: "power3.out",
     },
-    "<0.4"
+    "<0.2"
   );
 
+  // 🔹 Animasi angka (h3 counter)
+  // const counters = [
+  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(1) h3", end: 400, suffix: "+" },
+  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(2) h3", end: 22, suffix: "+" },
+  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(3) h3", end: 99, suffix: "%" },
+  // ];
+
+  // counters.forEach((counter) => {
+  //   let obj = { val: 0 };
+  //   gsap.to(obj, {
+  //     val: counter.end,
+  //     duration: 2,
+  //     ease: "power3.out",
+  //     snap: { val: 1 },
+  //     scrollTrigger: {
+  //       trigger: counter.selector,
+  //       start: "top 80%",
+  //       toggleActions: "play none none none",
+  //     },
+  //     onUpdate: () => {
+  //       document.querySelector(counter.selector).innerText =
+  //         obj.val + counter.suffix;
+  //     },
+  //   });
+  // });
+
+  //   tl.from("#servicesNow-section .font-satoshi h3", {
+  //     scale: 0.5,
+  //     rotate: -10,
+  //     opacity: 0,
+  //     duration: 0.6,
+  //     stagger: 0.2,
+  //     ease: "back.out(1.7)",
+  //   }, "<0.4"
+  // );
+
   tl.from(
-    "#about-me > div:nth-child(2) > div:first-child p",
+    "#servicesNow-section > div > div:last-child > p",
     {
       y: 30,
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    },
-    "<0.3"
-  );
-
-  tl.from(
-    "#about-me .flex-col.gap-8 + .flex > div",
-    {
-      x: -50,
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-      stagger: 0.2,
-    },
-    "<0.2"
-  );
-
-  tl.from(
-    "#about-me .flex.flex-wrap button",
-    {
-      x: -30,
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.out",
-      stagger: 0.1,
-    },
-    "<0.2"
-  );
-
-  tl.from(
-    "#about-me > div:last-child img",
-    {
-      x: 40,
       opacity: 0,
       duration: 0.7,
       ease: "power2.out",
     },
-    "<0.5"
+    "<0.2"
+  );
+
+  tl.from(
+    "#servicesNow-section .font-plusjakarta, #servicesNow-section button",
+    {
+      x: 30,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.2,
+      ease: "power2.out",
+    },
+    "<0.2"
   );
 }
 
@@ -331,150 +236,34 @@ function animateServices() {
   });
 }
 
-function animateLatestWork() {
+function animateFaq() {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: "#latest-work",
+      trigger: "#faq-section",
       start: "top 50%",
       toggleActions: "play none none none",
     },
   });
 
-  tl.from("#latest-work p.text-sm", {
-    x: -30,
+  tl.from("#faq-section .text-faq p", {
+    y: 30,
     opacity: 0,
-    duration: 0.6,
+    duration: 0.7,
+    stagger: 0.1,
     ease: "power2.out",
   });
 
   tl.from(
-    "#latest-work p.font-medium span",
-    {
-      x: -50,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      stagger: 0.2,
-    },
-    "<0.3"
-  );
-
-  tl.from(
-    "#latest-work  p.text-base",
+    "#faq-section .card-faq .faq-item",
     {
       x: 40,
+      top: "50%",
       opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    },
-    "<0.3"
-  );
-  tl.from(
-    "#latest-work p.font-medium  button",
-    {
-      y: 30,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.out",
-    },
-    "<0.2"
-  );
-  tl.from(
-    "#latest-work .card-mobile1",
-    {
-      x: 30,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.out",
+      duration: 0.6,
       stagger: 0.2,
-    },
-    "<0.4"
-  );
-  tl.from(
-    "#latest-work .card-mobile2",
-    {
-      x: -30,
-      opacity: 0,
-      duration: 0.7,
-      ease: "power2.out",
-      stagger: 0.2,
-    },
-    "<0.3"
-  );
-  tl.from(
-    "#latest-work .card-mobile3",
-    {
-      x: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      stagger: 0.2,
-    },
-    "<0.2"
-  );
-}
-//animasi image last work
-function animateCards() {
-  if (window.innerWidth < 1024) return;
-
-  const cards = document.querySelectorAll("#card-container .card");
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#card-container",
-      start: "top 87%",
-      toggleActions: "play none none none",
-    },
-  });
-
-  gsap.set(cards, {
-    position: "absolute",
-    left: "55%",
-    top: "50%",
-    xPercent: -50,
-    yPercent: -50,
-    opacity: 1,
-    scale: 0.9,
-    rotate: (i) => (i - 1) * 6,
-    zIndex: (i, _, arr) => arr.length - i,
-  });
-
-  const spacing = 420;
-  const startOffset = -(spacing * (cards.length - 1)) / 2;
-
-  cards.forEach((card, i) => {
-    tl.to(
-      card,
-      {
-        duration: 1.3,
-        x: startOffset + i * spacing,
-        y: 0,
-        scale: 1,
-        rotate: 0,
-        ease: "power3.out",
-      },
-      i * 0.3
-    );
-  });
-
-  tl.to(
-    cards,
-    {
-      duration: 0.4,
-      opacity: 1,
-      ease: "power3.inOut",
-    },
-    "<0.4"
-  );
-
-  tl.from(
-    ".flex.justify-center button",
-    {
-      scale: 0.4,
-      opacity: 0,
-      duration: 0.7,
       ease: "power2.out",
     },
-    "-=0.3"
+    "<0.10"
   );
 }
 
@@ -651,14 +440,10 @@ function animateFooter() {
 }
 
 document.addEventListener("preloadComplete", () => {
-  // if (document.querySelector("#mobile-menu")) animateHeader();
   if (document.querySelector("#hero-p")) animateHero();
-  if (document.querySelector(".element1 h3")) animateCounters();
-  if (document.querySelector("#about-me")) animateAboutMe();
+  if (document.querySelector("#servicesNow-section")) animateServicesNow();
   if (document.querySelector("#services-section")) animateServices();
-  if (document.querySelector(".flex.lg\\:flex-row.flex-col.md\\:pb-\\[80px\\]"))
-    animateLatestWork();
-  if (document.querySelector("#card-container")) animateCards();
+  if (document.querySelector("#faq-section")) animateFaq();
   if (document.querySelector("#testimonial-section")) {
     animateTestimonial();
   }

@@ -8,14 +8,13 @@ window.addEventListener("DOMContentLoaded", () => {
   let logoWrapper = document.getElementById("logo-wrapper");
   let logo = document.getElementById("logo");
   let preloader = document.getElementById("preloader");
-
   let imgLoad = imagesLoaded(document.querySelector("body"));
   let total = imgLoad.images.length;
   let loadedCount = 0;
 
   gsap.to("#ball", {
     y: -50,
-    duration: 1,
+    duration: 2,
     ease: "power1.inOut",
     yoyo: true,
     repeat: -1,
@@ -27,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     gsap.to(progressBar, {
       width: progress + "%",
-      duration: 0.8,
+      duration: 1,
       ease: "power3.out",
     });
     progressText.textContent = progress + "%";
@@ -43,7 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     gsap.to(progressContainer, {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.9,
       ease: "power2.out",
       onComplete: () => {
         gsap.to(".preloader-half.top", {
@@ -67,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 opacity: 1,
                 scale: 1,
                 duration: 0.5,
-                ease: "power3.out",
+                ease: "power2.out",
                 onComplete: () => {
                   let tl = gsap.timeline({
                     delay: 0.2,
@@ -89,28 +88,32 @@ window.addEventListener("DOMContentLoaded", () => {
                   });
 
                   tl.to(logo, {
-                    scale: 1.3,
+                    scale: 1.2,
                     rotation: -180,
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "power2.out",
                   });
 
-                  tl.to(logo, {
-                    scale: 1,
-                    rotation: -360,
-                    duration: 0.6,
-                    ease: "power2.inOut",
-                  });
+                  tl.to(
+                    logo,
+                    {
+                      scale: 1,
+                      rotation: -360,
+                      duration: 0.5,
+                      ease: "power2.inOut",
+                    },
+                    "<0.4"
+                  );
 
                   tl.to(
                     "#text-ewangga",
                     {
                       opacity: 1,
                       y: 0,
-                      duration: 0.6,
+                      duration: 0.5,
                       ease: "power3.out",
                     },
-                    "-=0.3"
+                    "<0.4"
                   );
                 },
               }
