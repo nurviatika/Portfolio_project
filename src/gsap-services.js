@@ -48,7 +48,7 @@ function animateServicesNow() {
       trigger: "#servicesNow-section",
       start: "top 40%",
       toggleActions: "play none none none",
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -63,41 +63,37 @@ function animateServicesNow() {
     "<0.2"
   );
 
-  // 🔹 Animasi angka (h3 counter)
-  // const counters = [
-  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(1) h3", end: 400, suffix: "+" },
-  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(2) h3", end: 22, suffix: "+" },
-  //   { selector: "#servicesNow-section .flex.items-center > div:nth-child(3) h3", end: 99, suffix: "%" },
-  // ];
+  document.querySelectorAll("#servicesNow-section .counter").forEach((el) => {
+    let obj = { val: 0 };
+    let end = parseInt(el.dataset.end, 10);
+    let suffix = el.dataset.suffix || "";
 
-  // counters.forEach((counter) => {
-  //   let obj = { val: 0 };
-  //   gsap.to(obj, {
-  //     val: counter.end,
-  //     duration: 2,
-  //     ease: "power3.out",
-  //     snap: { val: 1 },
-  //     scrollTrigger: {
-  //       trigger: counter.selector,
-  //       start: "top 80%",
-  //       toggleActions: "play none none none",
-  //     },
-  //     onUpdate: () => {
-  //       document.querySelector(counter.selector).innerText =
-  //         obj.val + counter.suffix;
-  //     },
-  //   });
-  // });
+    gsap.to(obj, {
+      val: end,
+      duration: 2,
+      ease: "power3.out",
+      snap: { val: 1 },
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      onUpdate: () => {
+        el.textContent = obj.val + suffix;
+      },
+    });
+  });
 
-  //   tl.from("#servicesNow-section .font-satoshi h3", {
-  //     scale: 0.5,
-  //     rotate: -10,
-  //     opacity: 0,
-  //     duration: 0.6,
-  //     stagger: 0.2,
-  //     ease: "back.out(1.7)",
-  //   }, "<0.4"
-  // );
+  tl.from(
+    "#servicesNow-section p.text-xs ",
+    {
+      y: 20,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power2.out",
+    },
+    "<0.4"
+  );
 
   tl.from(
     "#servicesNow-section > div > div:last-child > p",

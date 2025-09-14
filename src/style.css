@@ -47,8 +47,41 @@
   }
 
   @variant xl {
-    /* @apply bg-blue; */
     max-width: var(--container-xl);
-    /* padding-inline: 120px; */
   }
 }
+
+@keyframes spin {
+  /* from {
+          transform: rotate(0deg);
+        } */
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-memutar {
+  animation: spin 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  will-change: transform;
+
+  /* animation-duration: 500ms; */
+  /* background: red; */
+}
+
+@keyframes reverse-spin {
+  to {
+    transform: rotate(-350deg);
+  }
+}
+.animate-spin {
+  animation: spin 15s infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+/* @keyframes reverse-spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.animate-spin {
+  animation: spin 10s infinite;
+} */

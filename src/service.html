@@ -75,7 +75,7 @@
 
     <div
       id="radial-bg"
-      class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[720px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_white_61%)] opacity-70"
+      class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[680px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_white_61%)] opacity-70"
     ></div>
 
     <header
@@ -242,23 +242,27 @@
               alt="image-hover"
             />
           </div>
-          <div class="flex items-center py-6 w-full justify-between">
+          <div class="flex items-center py-6 w-full justify-between gap-[54px]">
             <div class="font-satoshi flex flex-col">
               <h3
-                class="md:text-[40px] text-[32px] font-bold text-black tabular-nums inline-block min-w-[90px] text-center"
+                class="counter md:text-[40px] text-[32px] font-bold text-black tabular-nums text-center"
+                data-end="400"
+                data-suffix="+"
               >
-                400+
+                0+
               </h3>
               <p class="lg:text-base md:text-sm text-xs text-gray font-normal">
                 Lates Project
               </p>
             </div>
 
-            <div class="font-satoshi gap- flex flex-col">
+            <div class="font-satoshi flex flex-col">
               <h3
-                class="md:text-[40px] text-[32px] font-bold text-black px-[41px]"
+                class="counter md:text-[40px] text-[32px] font-bold text-black tabular-nums text-center"
+                data-end="22"
+                data-suffix="+"
               >
-                22+
+                0+
               </h3>
               <p
                 class="lg:text-base md:text-sm text-xs text-gray font-normal text-center"
@@ -267,9 +271,13 @@
               </p>
             </div>
 
-            <div class="font-satoshi gap- flex flex-col">
-              <h3 class="md:text-[40px] text-[32px] font-bold text-black">
-                99%
+            <div class="font-satoshi flex flex-col">
+              <h3
+                class="counter md:text-[40px] text-[32px] font-bold text-black tabular-nums text-center"
+                data-end="99"
+                data-suffix="%"
+              >
+                0%
               </h3>
               <p class="lg:text-base md:text-sm text-xs text-gray font-normal">
                 User Trusted
