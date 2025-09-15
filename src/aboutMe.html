@@ -75,10 +75,10 @@
     ></div>
 
     <header
-      id="navbar"
       class="flex justify-center mt-8 fixed w-full top-0 left-1/2 -translate-x-1/2 z-90"
     >
       <nav
+        id="navbar"
         class="bg-black flex items-center rounded-full px-3 py-3 md:max-w-[590px] max-w-[343px] w-full gap-[80px] justify-between"
       >
         <div class="flex gap-10 items-center pl-3">
@@ -154,75 +154,86 @@
             <span class="block w-[25px] h-[3px] bg-white transition"></span>
           </span>
         </div>
-
-        <div
-          id="mobile-menu"
-          class="container md:hidden fixed top-[-31px] left-0 w-full h-[100vh] bg-black z-[99999999] shadow-lg py-9 px-8 text-mediumGray text-sm font-medium transform translate-x-full transition-transform duration-700 ease-in-out"
-        >
-          <div class="flex items-center justify-between mb-8">
-            <a href="/index.html">
-              <svg
-                width="38"
-                height="38"
-                viewBox="0 0 38 38"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="38" height="38" rx="19" fill="white" />
-                <path
-                  d="M18.0157 26.5758H12.5645V11.4242H17.8706C22.3477 11.4242 25.4361 14.5126 25.4361 19.0311C25.4361 23.4875 22.4099 26.5758 18.0157 26.5758ZM17.6219 13.87H15.2175V24.13H17.767C20.7932 24.13 22.6379 22.1816 22.6379 19.0311C22.6379 15.8184 20.7517 13.87 17.6219 13.87Z"
-                  fill="#03040A"
-                />
-              </svg>
-            </a>
-
-            <button id="close-menu" class="text-2xl font-bold text-white">
-              ✕
-            </button>
-          </div>
-
-          <ul class="flex flex-col gap-6 text-base font-medium text-gray">
-            <li>
-              <a href="/src/aboutMe.html" class="hover:text-white">About Me</a>
-            </li>
-            <li>
-              <a href="/src/service.html" class="hover:text-white">Services</a>
-            </li>
-            <li>
-              <a href="/src/Learning.html" class="hover:text-white">Learning</a>
-            </li>
-            <a
-              href="/src/contact.html"
-              class="flex text-gray text-sm py-2 rounded-full font-medium items-center gap-2 hover:text-white transition font-plusjakarta pr-3"
-            >
-              Let’s Connect
-
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.83398 5.83337H14.1673V14.1667"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M5.83398 14.1667L14.1673 5.83337"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </ul>
-        </div>
       </nav>
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed top-[-31px] left-0 w-full h-[100vh] bg-black z-[99999999] shadow-lg py-9 px-8 text-mediumGray text-sm font-medium transform translate-x-full transition-transform duration-700 ease-in-out"
+      >
+        <div class="flex items-center justify-between mb-8">
+          <a href="/index.html">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="38" height="38" rx="19" fill="white" />
+              <path
+                d="M18.0157 26.5758H12.5645V11.4242H17.8706C22.3477 11.4242 25.4361 14.5126 25.4361 19.0311C25.4361 23.4875 22.4099 26.5758 18.0157 26.5758ZM17.6219 13.87H15.2175V24.13H17.767C20.7932 24.13 22.6379 22.1816 22.6379 19.0311C22.6379 15.8184 20.7517 13.87 17.6219 13.87Z"
+                fill="#03040A"
+              />
+            </svg>
+          </a>
+          <svg
+            id="close-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </div>
+
+        <ul class="flex flex-col gap-6 text-base font-medium text-gray">
+          <li>
+            <a href="/src/aboutMe.html" class="hover:text-white">About Me</a>
+          </li>
+          <li>
+            <a href="/src/service.html" class="hover:text-white">Services</a>
+          </li>
+          <li>
+            <a href="/src/Learning.html" class="hover:text-white">Learning</a>
+          </li>
+          <a
+            href="/src/contact.html"
+            class="flex text-gray text-sm py-2 rounded-full font-medium items-center gap-2 hover:text-white transition font-plusjakarta pr-3"
+          >
+            Let’s Connect
+
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.83398 5.83337H14.1673V14.1667"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.83398 14.1667L14.1673 5.83337"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </ul>
+      </div>
     </header>
 
     <section class="container pt-[140px] md:pb-[73px] pb-[48px]">
