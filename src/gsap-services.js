@@ -40,7 +40,7 @@ function animateHero() {
     },
     "-=0.1"
   );
-}
+}         
 
 function animateServicesNow() {
   const tl = gsap.timeline({

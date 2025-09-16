@@ -34,11 +34,11 @@
 @utility container {
   padding-inline: 10px;
   margin-inline: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   @variant sm {
     padding-inline: 20px;
-    overflow-x: visible;
+    /* overflow-x: visible; */
   }
   @variant md {
     padding-inline: 60px;

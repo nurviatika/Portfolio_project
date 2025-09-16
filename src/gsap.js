@@ -1,26 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { TextPlugin } from "gsap/TextPlugin";
-// gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
-
-// function animateHeader() {
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#mobile-menu",
-//       start: "top 80%",
-//       toggleActions: "play none none none",
-//     },
-//   });
-
-//   tl.from("#mobile-menu", {
-//     x: -20,
-//     opacity: 0,
-//     duration: 0.6,
-//     ease: "power2.out",
-//     stagger: 0.2,
-//   });
-// }
 
 function animateHero() {
   const tl = gsap.timeline({
@@ -276,6 +256,7 @@ function animateServices() {
 
     let targetScale = 1;
     if (reverseIndex === 1) targetScale = 0.9;
+    if (reverseIndex === 0) targetScale = 0.9;
     if (reverseIndex >= 2) targetScale = 0.9;
     const zIndex = index + 1;
     gsap.fromTo(
