@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/svg+xml" href="/public/logo.svg" />
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/neck-l-sans" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <section
+      id="preloader"
+      class="fixed inset-0 bg-[#cdf9c4] text-black flex items-center justify-center z-[100] overflow-hidden"
+    >
+      <div
+        class="preloader-half top absolute top-0 left-0 w-full h-1/2 bg-white"
+      ></div>
+      <div
+        class="preloader-half bottom absolute bottom-0 left-0 w-full h-1/2 bg-white"
+      ></div>
+      <div
+        id="progress-container"
+        class="relative z-10 flex flex-col items-center"
+      >
+        <div
+          id="ball"
+          class="w-6 h-6 bg-[#84be78] rounded-full mb-8 relative"
+        ></div>
+        <div class="w-64 bg-[#cdf9c4] h-[2px] relative overflow-hidden">
+          <div id="progress-bar" class="bg-white h-full w-0"></div>
+        </div>
+        <p
+          id="progress-text"
+          class="mt-4 text-lg font-satoshi font-semibold text-black"
+        >
+          0%
+        </p>
+      </div>
+    </section>
+
+    <div
+      id="logo-wrapper"
+      class="fixed inset-0 flex items-center justify-center z-[100] opacity-0 pointer-events-none"
+    >
+      <svg
+        id="logo"
+        width="60"
+        height="60"
+        viewBox="0 0 38 38"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="scale-75"
+      >
+        <rect width="38" height="38" rx="19" fill="white" />
+        <path
+          d="M18.0157 26.5758H12.5645V11.4242H17.8706C22.3477 11.4242 25.4361 14.5126 25.4361 19.0311C25.4361 23.4875 22.4099 26.5758 18.0157 26.5758ZM17.6219 13.87H15.2175V24.13H17.767C20.7932 24.13 22.6379 22.1816 22.6379 19.0311C22.6379 15.8184 20.7517 13.87 17.6219 13.87Z"
+          fill="#03040A"
+        />
+      </svg>
+      <span
+        id="text-ewangga"
+        class="text-4xl font-bold text-black font-satoshi ml-2 opacity-0 rotate-x-40 -rotate-y-4"
+        >ewangga</span
+      >
+    </div>
+
+    <div
+      id="radial-bg"
+      class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[720px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_white_61%)] opacity-70"
+    ></div>
+
+    <header
+      class="flex justify-center mt-7 fixed w-full top-0 left-1/2 -translate-x-1/2 z-90"
+    >
+      <nav
+        id="navbar"
+        class="bg-black flex items-center rounded-full px-3 py-3 md:max-w-[590px] max-w-[343px] w-full gap-[80px] justify-between"
+      >
+        <div class="flex gap-10 items-center pl-3">
+          <a href="/index.html">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="38" height="38" rx="19" fill="white" />
+              <path
+                d="M18.0157 26.5758H12.5645V11.4242H17.8706C22.3477 11.4242 25.4361 14.5126 25.4361 19.0311C25.4361 23.4875 22.4099 26.5758 18.0157 26.5758ZM17.6219 13.87H15.2175V24.13H17.767C20.7932 24.13 22.6379 22.1816 22.6379 19.0311C22.6379 15.8184 20.7517 13.87 17.6219 13.87Z"
+                fill="#03040A"
+              />
+            </svg>
+          </a>
+
+          <ul
+            class="md:flex hidden gap-6 text-sm font-normal text-gray py-[9px] font-satoshi"
+          >
+            <li>
+              <a href="/aboutMe.html" class="hover:text-white">About Me</a>
+            </li>
+            <li>
+              <a href="/src/service.html" class="hover:text-white">Services</a>
+            </li>
+            <li>
+              <a href="/src/Learning.html" class="hover:text-white">Learning</a>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href="/src/contact.html"
+          class="text-white text-sm py-2 rounded-full font-medium md:flex hidden items-center gap-2 hover:text-gray transition font-plusjakarta pr-3"
+        >
+          Let’s Connect
+
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.83398 5.83337H14.1673V14.1667"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.83398 14.1667L14.1673 5.83337"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+
+        <div class="gap-1.5 pr-3 md:hidden flex">
+          <p class="text-white text-sm font-medium">Menu</p>
+          <span
+            id="menu-toggle"
+            class="flex flex-col justify-between h-5 w-5 cursor-pointer"
+          >
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+            <span class="block w-[25px] h-[3px] bg-white transition"></span>
+          </span>
+        </div>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed top-[-28px] left-0 w-full h-[100vh] bg-black z-[99999999] shadow-lg py-9 px-8 text-mediumGray text-sm font-medium transform translate-x-full transition-transform duration-700 ease-in-out"
+      >
+        <div class="flex items-center justify-between mb-8">
+          <a href="/index.html">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="38" height="38" rx="19" fill="white" />
+              <path
+                d="M18.0157 26.5758H12.5645V11.4242H17.8706C22.3477 11.4242 25.4361 14.5126 25.4361 19.0311C25.4361 23.4875 22.4099 26.5758 18.0157 26.5758ZM17.6219 13.87H15.2175V24.13H17.767C20.7932 24.13 22.6379 22.1816 22.6379 19.0311C22.6379 15.8184 20.7517 13.87 17.6219 13.87Z"
+                fill="#03040A"
+              />
+            </svg>
+          </a>
+          <svg
+            id="close-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </div>
+
+        <ul class="flex flex-col gap-6 text-base font-medium text-gray">
+          <li>
+            <a href="/aboutMe.html" class="hover:text-white">About Me</a>
+          </li>
+          <li>
+            <a href="/src/service.html" class="hover:text-white">Services</a>
+          </li>
+          <li>
+            <a href="/src/Learning.html" class="hover:text-white">Learning</a>
+          </li>
+          <a
+            href="/src/contact.html"
+            class="flex text-gray text-sm py-2 rounded-full font-medium items-center gap-2 hover:text-white transition font-plusjakarta pr-3"
+          >
+            Let’s Connect
+
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.83398 5.83337H14.1673V14.1667"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.83398 14.1667L14.1673 5.83337"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      class="container pt-[140px] md:pb-[73px] pb-[48px] md:overflow-x-visible overflow-x-hidden"
+    >
+      <div
+        class="lg:max-w-[838px] md:max-w-[600px] w-full flex flex-col gap-8 items-center mx-auto relative z-10"
+      >
+        <div
+          id="hero-p"
+          class="flex rounded-full max-w-[207px] w-full h-[42px] py-2 md:px-4 px-3 bg-black/10 backdrop-blur-[25px] justify-center"
+        >
+          <p class="text-base font-medium text-black font-satoshi">
+            Meet With Me 🚀
+          </p>
+        </div>
+
+        <h1
+          class="lg:text-[80px] md:text-6xl text-[40px] font-medium text-center leading-tight font-satoshi md:px-0 px-2"
+        >
+          <span class="text-black">Getting to know Dewangga</span>
+          <span class="text-gray-400"> more deeply</span>
+        </h1>
+
+        <div
+          class="hero-desc flex flex-col gap-6 lg:max-w-[586px] md:max-w-[350px] w-full items-center text-center"
+        >
+          <p
+            class="text-base font-normal text-[#A1A6B0] font-satoshi px-3 text-centers"
+          >
+            A behind-the-scenes breakdown of turning rough ideas into refined
+            digital experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="aboutMe-section"
+      class="container md:pt-[100px] pt-[40px] lg:pb-0 pb-[40px] flex justify-between lg:flex-row flex-col lg:gap-0 gap-6 md:overflow-x-visible overflow-x-hidden"
+    >
+      <div class="flex lg:flex-row flex-col-reverse">
+        <div
+          class="lg:max-w-[437px] w-full flex flex-col lg:gap-[200px] md:gap-8 gap-4 z-10"
+        >
+          <h3
+            class="font-satoshi font-medium md:text-5xl text-[32px] leading-[110%]"
+          >
+            <span class="text-black">A Journey Through Design,</span>
+            <span class="text-gray-400"> Growth & Collaboration</span>
+          </h3>
+          <div class="flex flex-col gap-6">
+            <p
+              class="font-plusjakarta text-sm leading-[140%] text-gray-text pr-[50px] md:pr-0"
+            >
+              Over the years, I’ve had the privilege of working with diverse
+              teams, founders, and startups from early-stage MVPs to scaling
+              digital products. Here’s a look at some of the meaningful work
+              I’ve been part of:
+            </p>
+            <button
+              class="bg-black py-3 px-[20px] max-w-[120px] w-full rounded-full"
+            >
+              <span class="text-white font-medium text-sm font-plusjakarta">
+                Contact Me
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative z-0 lg:left-[-117px] left-0 pb-6 lg:pb-0 flex lg:justify-normal justify-center"
+        >
+          <img src="/public/image-hero-about.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="flex lg:flex-col flex-row md:gap-6 gap-[21px] lg:justify-end md:justify-start justify-center lg:pb-[100px] pb-0"
+      >
+        <div class="bg-[#F2F2F2] rounded-3xl px-[33px] py-6">
+          <img src="/public/figma logo.svg" alt="" />
+        </div>
+        <div class="bg-[#F2F2F2] rounded-3xl p-6">
+          <img src="/public/wix logo.svg" alt="" />
+        </div>
+        <div class="bg-[#F2F2F2] rounded-3xl px-[25px] py-[35px]">
+          <img src="/public/Vector.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="Country-section"
+      class="pt-[100px] relative bg-black overflow-hidden lg:max-h-[911px] md:max-h-[800px] max-h-[517px] h-full"
+    >
+      <img
+        src="/public/bg-serverr.svg"
+        alt=""
+        class="w-full md:max-w-[800px] max-w-[423px] md:max-h-[509px] max-h-[300px] h-full absolute bg-cover top-[-50px] md:right-[351px] right-0"
+      />
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 h-[360px] w-full md:h-[720px] rounded-b-full z-0 bg-[radial-gradient(circle_at_top,_#A5FF93_8%,_black_37%)] opacity-35"
+      ></div>
+      <div
+        class="container flex flex-col items-center relative md:gap-[45px] gap-[60px]"
+      >
+        <div class="max-w-[556px] w-full flex flex-col items-center">
+          <p
+            class="text-sm font-medium text-white text-center font-plusjakarta"
+          >
+            Country
+          </p>
+
+          <div class="text-center flex flex-col gap-8">
+            <p
+              class="lg:text-[60px] md:text-[55px] text-[32px] font-medium text-white font-satoshi leading-[110%]"
+            >
+              My Client Country
+            </p>
+            <p
+              class="font-normal text-base text-gray font-satoshi max-w-[486px] w-full"
+            >
+              i have mach client from all the world, check and let’s make a
+              project like the others
+            </p>
+          </div>
+        </div>
+
+        <div class="relative animate-memutar">
+          <img
+            class="bg-cover z-0 max-w-[1044px] w-full"
+            src="/public/country-aboutme.png"
+            alt=""
+          />
+          <div
+            class="animate-spin flex flex-col absolute z-10 items-center md:top-[12%] top-[16%] left-[6%]"
+          >
+            <img
+              class="md:object-none object-cover md:flex hidden"
+              src="/public/icon-brazil.svg"
+              alt=""
+            />
+            <img
+              class="md:hidden flex"
+              src="/public/icon-brazil-mb.svg"
+              alt=""
+            />
+            <div
+              class="md:w-[9px] w-[3px] md:h-[9px] h-[3px] bg-[#A9FF97] rounded-full md:translate-y-[-22px] translate-y-[-7px]"
+            ></div>
+          </div>
+          <div
+            class="animate-spin flex flex-col absolute z-10 items-center md:right-[31%] right-[32%] md:top-[-1%] top-0"
+          >
+            <img
+              class="w-full md:object-none object-cover md:flex hidden"
+              src="/public/icon-usa.svg"
+              alt=""
+            />
+            <img class="md:hidden flex" src="/public/icon-usa-mb.svg" alt="" />
+            <div
+              class="md:w-[9px] w-[3px] md:h-[9px] h-[3px] bg-[#A9FF97] rounded-full md:translate-y-[-22px] translate-y-[-7px]"
+            ></div>
+          </div>
+
+          <div
+            class="animate-spin flex flex-col absolute z-10 items-center md:top-[16%] top-[14%] md:right-[6%] right-[7%]"
+          >
+            <img
+              class="w-full md:object-none object-cover md:flex hidden"
+              src="/public/icon-germany.svg"
+              alt=""
+            />
+            <img
+              class="md:hidden flex"
+              src="/public/icon-germany-mb.svg"
+              alt=""
+            />
+            <div
+              class="md:w-[9px] w-[3px] md:h-[9px] h-[3px] bg-[#A9FF97] rounded-full md:translate-y-[-22px] translate-y-[-7px]"
+            ></div>
+          </div>
+
+          <div
+            class="animate-spin flex flex-col absolute z-10 items-center top-[29%] md:left-[33%] left-[34%]"
+          >
+            <img
+              class="w-full md:object-none object-cover md:flex hidden"
+              src="/public/icon-spain.svg"
+              alt=""
+            />
+            <img
+              class="md:hidden flex"
+              src="/public/icon-spain-mb.svg"
+              alt=""
+            />
+            <div
+              class="md:w-[9px] w-[3px] md:h-[9px] h-[3px] bg-[#A9FF97] rounded-full md:translate-y-[-22px] translate-y-[-7px]"
+            ></div>
+          </div>
+
+          <div
+            class="animate-spin flex flex-col absolute z-10 items-center md:top-[36%] top-[31%] md:right-0 right-[2%]"
+          >
+            <img
+              class="w-full md:object-none object-cover md:flex hidden"
+              src="/public/icon-indonesia.svg"
+              alt=""
+            />
+            <img
+              class="md:hidden flex"
+              src="/public/icon-indonesia-mb.svg"
+              alt=""
+            />
+            <div
+              class="md:w-[9px] w-[3px] md:h-[9px] h-[3px] bg-[#A9FF97] rounded-full md:translate-y-[-22px] translate-y-[-7px] translate-x-[7px]"
+            ></div>
+          </div>
+          <div
+            class="absolute max-w-[1051px] w-full md:h-[289px] h-[101px] top-[30%] z-10 bg-gradient-to-b from-black/0 to-black"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="schedule-section"
+      class="container md:py-[100px] py-10 md:gap-[60px] gap-10 flex flex-col md:overflow-x-visible overflow-x-hidden"
+    >
+      <div class="flex flex-col max-w-[486px] w-full gap-8">
+        <h3
+          class="font-satoshi font-medium md:text-[60px] text-[32px] text-black"
+        >
+          Let’s Talk and Create Schedule
+        </h3>
+        <p class="font-satoshi font-normal text-base text-gray">
+          All thinks deesign, we got you convered
+        </p>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex flex-col gap-6 rounded-xl">
+          <div class="input-name flex flex-row gap-4">
+            <div
+              class="flex items-center max-w-[592px] w-full border-b border-gray-300"
+            >
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full py-2 text-sm text-[#B9BDC5] placeholder:text-gray-400 focus:outline-none font-satoshi"
+              />
+            </div>
+
+            <div
+              class="flex items-center max-w-[592px] w-full border-b border-gray-300"
+            >
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full py-2 text-sm text-[#B9BDC5] placeholder:text-gray-400 focus:outline-none font-satoshi"
+              />
+            </div>
+          </div>
+
+          <div class="company-name flex flex-col w-full">
+            <input
+              type="text"
+              placeholder="Company Name"
+              class="border-b border-gray-300 focus:outline-none focus:border-black py-2 text-sm text-[#B9BDC5] placeholder:text-gray-400 font-satoshi"
+            />
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-medium text-black">Your Class Choose</p>
+            <div class="button-list flex gap-3 flex-wrap">
+              <button
+                class="px-4 py-2 rounded-full border border-gray-300 text-sm hover:bg-black hover:text-white transition"
+              >
+                Website Design
+              </button>
+              <button
+                class="px-4 py-2 rounded-full border border-gray-300 text-sm hover:bg-black hover:text-white transition"
+              >
+                App Design
+              </button>
+              <button
+                class="px-4 py-2 rounded-full border border-gray-300 text-sm hover:bg-black hover:text-white transition"
+              >
+                UI/UX Design
+              </button>
+            </div>
+          </div>
+
+          <textarea
+            placeholder="Your idea Design"
+            rows="5"
+            class="ide-design border-b border-gray-300 focus:outline-none focus:border-black py-2 text-sm text-gray-600 placeholder:text-gray-400 font-satoshi"
+          ></textarea>
+
+          <div class="button-get pt-4">
+            <button
+              class="bg-black text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+            >
+              Get a Service Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-black lg:pt-[100px] pt-10 pb-[32px] md:overflow-x-visible overflow-x-hidden"
+    >
+      <div class="container flex flex-col gap-6">
+        <div
+          class="bg-white max-w-[38px] w-full h-[38px] rounded-full flex items-center justify-center"
+        >
+          <span class="text-black font-bold">D</span>
+        </div>
+        <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-6">
+          <div class="lg:max-w-[448px] w-full md:gap-6 gap-0 flex flex-col">
+            <div class="w-fit">
+              <p
+                class="md:text-[48px] text-[32px] font-normal text-white font-satoshi inline-block border-b-2 md:border-b-8 border-b-white"
+              >
+                Info@Dewangga.com
+              </p>
+            </div>
+
+            <div
+              class="flex md:pt-2 pt-3 md:justify-between justify-normal md:gap-0 gap-[27px] md:pb-0 pb-6"
+            >
+              <p
+                class="text-base font-normal text-white leading-[140%] max-w-[202px] w-full font-satoshi"
+              >
+                2972 Westheimer Rd. Santa Ana, Illinois 85486
+              </p>
+              <p class="text-base font-normal text-white font-satoshi">
+                +64 123 123456
+              </p>
+            </div>
+
+            <div class="flex gap-5 max-w-[156px] w-full h-[24px]">
+              <div
+                class="rounded-full border border-faded-gray p-1.5 flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 6C12 2.7 9.3 0 6 0C2.7 0 0 2.7 0 6C0 9 2.175 11.475 5.025 11.925V7.725H3.525V6H5.025V4.65C5.025 3.15 5.925 2.325 7.275 2.325C7.95 2.325 8.625 2.475 8.625 2.475V3.975H7.875C7.125 3.975 6.9 4.425 6.9 4.875V6H8.55L8.25 7.725H6.825V12C9.825 11.55 12 9 12 6Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="rounded-full border border-faded-gray px-1.5 py-[7px] flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="10"
+                  viewBox="0 0 12 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1.25C11.55 1.475 11.1 1.55 10.575 1.625C11.1 1.325 11.475 0.875 11.625 0.275C11.175 0.575 10.65 0.725 10.05 0.875C9.6 0.425 8.925 0.125 8.25 0.125C6.675 0.125 5.475 1.625 5.85 3.125C3.825 3.05 2.025 2.075 0.75 0.575C0.075 1.7 0.45 3.125 1.5 3.875C1.125 3.875 0.75 3.725 0.375 3.575C0.375 4.7 1.2 5.75 2.325 6.05C1.95 6.125 1.575 6.2 1.2 6.125C1.5 7.1 2.4 7.85 3.525 7.85C2.625 8.525 1.275 8.9 0 8.75C1.125 9.425 2.4 9.875 3.75 9.875C8.325 9.875 10.875 6.05 10.725 2.525C11.25 2.225 11.7 1.775 12 1.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="rounded-full border border-faded-gray p-1.5 flex items-center"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.7 12H0.149998V3.975H2.7V12ZM1.425 2.85C0.600001 2.85 0 2.25 0 1.425C0 0.6 0.675001 0 1.425 0C2.25 0 2.85 0.6 2.85 1.425C2.85 2.25 2.25 2.85 1.425 2.85ZM12 12H9.45V7.65C9.45 6.375 8.925 6 8.175 6C7.425 6 6.675 6.6 6.675 7.725V12H4.125V3.975H6.525V5.1C6.75 4.575 7.65 3.75 8.925 3.75C10.35 3.75 11.85 4.575 11.85 7.05V12H12Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="rounded-full border border-faded-gray p-[5px] flex items-center"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.00039 1.8999C8.65039 1.8999 8.87539 1.8999 9.55039 1.8999C10.1504 1.8999 10.4504 2.0499 10.6754 2.1249C10.9754 2.2749 11.2004 2.3499 11.4254 2.5749C11.6504 2.7999 11.8004 3.0249 11.8754 3.3249C11.9504 3.5499 12.0254 3.8499 12.1004 4.4499C12.1004 5.1249 12.1004 5.2749 12.1004 6.9999C12.1004 8.7249 12.1004 8.8749 12.1004 9.5499C12.1004 10.1499 11.9504 10.4499 11.8754 10.6749C11.7254 10.9749 11.6504 11.1999 11.4254 11.4249C11.2004 11.6499 10.9754 11.7999 10.6754 11.8749C10.4504 11.9499 10.1504 12.0249 9.55039 12.0999C8.87539 12.0999 8.72539 12.0999 7.00039 12.0999C5.27539 12.0999 5.12539 12.0999 4.45039 12.0999C3.85039 12.0999 3.55039 11.9499 3.32539 11.8749C3.02539 11.7249 2.80039 11.6499 2.57539 11.4249C2.35039 11.1999 2.20039 10.9749 2.12539 10.6749C2.05039 10.4499 1.97539 10.1499 1.90039 9.5499C1.90039 8.8749 1.90039 8.7249 1.90039 6.9999C1.90039 5.2749 1.90039 5.1249 1.90039 4.4499C1.90039 3.8499 2.05039 3.5499 2.12539 3.3249C2.27539 3.0249 2.35039 2.7999 2.57539 2.5749C2.80039 2.3499 3.02539 2.1999 3.32539 2.1249C3.55039 2.0499 3.85039 1.9749 4.45039 1.8999C5.12539 1.8999 5.35039 1.8999 7.00039 1.8999ZM7.00039 0.774902C5.27539 0.774902 5.12539 0.774902 4.45039 0.774902C3.77539 0.774902 3.32539 0.924903 2.95039 1.0749C2.57539 1.2249 2.20039 1.4499 1.82539 1.8249C1.45039 2.1999 1.30039 2.4999 1.07539 2.9499C0.925391 3.3249 0.850391 3.7749 0.775391 4.4499C0.775391 5.1249 0.775391 5.3499 0.775391 6.9999C0.775391 8.7249 0.775391 8.8749 0.775391 9.5499C0.775391 10.2249 0.925391 10.6749 1.07539 11.0499C1.22539 11.4249 1.45039 11.7999 1.82539 12.1749C2.20039 12.5499 2.50039 12.6999 2.95039 12.9249C3.32539 13.0749 3.77539 13.1499 4.45039 13.2249C5.12539 13.2249 5.35039 13.2249 7.00039 13.2249C8.65039 13.2249 8.87539 13.2249 9.55039 13.2249C10.2254 13.2249 10.6754 13.0749 11.0504 12.9249C11.4254 12.7749 11.8004 12.5499 12.1754 12.1749C12.5504 11.7999 12.7004 11.4999 12.9254 11.0499C13.0754 10.6749 13.1504 10.2249 13.2254 9.5499C13.2254 8.8749 13.2254 8.6499 13.2254 6.9999C13.2254 5.3499 13.2254 5.1249 13.2254 4.4499C13.2254 3.7749 13.0754 3.3249 12.9254 2.9499C12.7754 2.5749 12.5504 2.1999 12.1754 1.8249C11.8004 1.4499 11.5004 1.2999 11.0504 1.0749C10.6754 0.924903 10.2254 0.849902 9.55039 0.774902C8.87539 0.774902 8.72539 0.774902 7.00039 0.774902Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M7.00039 3.7749C5.20039 3.7749 3.77539 5.1999 3.77539 6.9999C3.77539 8.7999 5.20039 10.2249 7.00039 10.2249C8.80039 10.2249 10.2254 8.7999 10.2254 6.9999C10.2254 5.1999 8.80039 3.7749 7.00039 3.7749ZM7.00039 9.0999C5.87539 9.0999 4.90039 8.1999 4.90039 6.9999C4.90039 5.8749 5.80039 4.8999 7.00039 4.8999C8.12539 4.8999 9.10039 5.7999 9.10039 6.9999C9.10039 8.1249 8.12539 9.0999 7.00039 9.0999Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M10.3004 4.4499C10.7146 4.4499 11.0504 4.11412 11.0504 3.6999C11.0504 3.28569 10.7146 2.9499 10.3004 2.9499C9.88618 2.9499 9.55039 3.28569 9.55039 3.6999C9.55039 4.11412 9.88618 4.4499 10.3004 4.4499Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:max-w-[329px] w-full flex justify-between">
+            <div class="flex flex-col gap-6">
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Linkedin
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Upwork
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Behance
+              </p>
+              <p class="font-medium text-sm text-white font-plusjakarta">
+                Instagram
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-base font-medium text-white font-satoshi">
+                Let’s Work Together
+              </p>
+              <button
+                class="footer-btn bg-white py-3 px-[20px] max-w-[160px] w-full rounded-full"
+              >
+                <span class="text-black font-medium text-sm font-plusjakarta"
+                  >See More</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="footer-text flex flex-wrap lg:justify-between justify-center border-t border-gray pt-6 md:gap-0 gap-[10px]"
+        >
+          <p class="text-white text-sm font-normal font-plusjakarta">
+            © 2025 MyCrypto. All rights reserved.
+          </p>
+          <div class="flex gap-2 items-center">
+            <p class="text-white text-sm font-normal font-plusjakarta">
+              Privacy Policy
+            </p>
+            <svg
+              width="6"
+              height="6"
+              viewBox="0 0 6 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="3" cy="3" r="3" fill="white" fill-opacity="0.2" />
+            </svg>
+            <p class="text-white text-sm font-normal font-plusjakarta">
+              Terms & Conditions
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <img
+            class="max-w-[1200px] w-full"
+            src="/public/image-footer.png"
+            alt="dewangga"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/preloader.js"></script>
+    <script type="module" src="/src/gsap-about.js"></script>
+  </body>
+</html>
