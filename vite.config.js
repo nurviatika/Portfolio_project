@@ -7,10 +7,10 @@ export default defineConfig({
       input: {
         main: "index.html",
         about: "src/aboutMe.html",
+        contact: "src/contact.html",
         service: "src/service.html",
         learning: "src/Learning.html",
         learningDetail: "src/LearningDetail.html",
-        contact: "src/contact.html",
       },
     },
   },
