@@ -9,7 +9,7 @@ export default defineConfig({
         about: "src/aboutMe.html",
         service: "src/service.html",
         learning: "src/Learning.html",
-        learningDetail: "src/Learning-Detail.html",
+        learningDetail: "src/LearningDetail.html",
         contact: "src/contact.html",
       },
     },
