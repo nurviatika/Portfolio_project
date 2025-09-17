@@ -274,41 +274,6 @@ function animateServices() {
         },
       }
     );
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      })
-      .from(card, {
-        y: 60,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.out",
-      })
-      .from(
-        text,
-        {
-          x: -60,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        img,
-        {
-          x: 60,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.5"
-      );
   });
 }
 
@@ -394,7 +359,7 @@ function animateLatestWork() {
     "<0.2"
   );
 }
-//animasi image last work
+
 function animateCards() {
   if (window.innerWidth < 1024) return;
 

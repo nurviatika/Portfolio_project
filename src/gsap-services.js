@@ -40,7 +40,7 @@ function animateHero() {
     },
     "-=0.1"
   );
-}         
+}
 
 function animateServicesNow() {
   const tl = gsap.timeline({
@@ -177,6 +177,7 @@ function animateServices() {
 
     let targetScale = 1;
     if (reverseIndex === 1) targetScale = 0.9;
+    if (reverseIndex === 0) targetScale = 0.9;
     if (reverseIndex >= 2) targetScale = 0.9;
     const zIndex = index + 1;
     gsap.fromTo(
@@ -194,41 +195,6 @@ function animateServices() {
         },
       }
     );
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      })
-      .from(card, {
-        y: 60,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.out",
-      })
-      .from(
-        text,
-        {
-          x: -60,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        img,
-        {
-          x: 60,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.5"
-      );
   });
 }
 

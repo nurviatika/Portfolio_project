@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   gsap.to("#ball", {
     y: -50,
-    duration: 2,
+    duration: 1,
     ease: "power1.inOut",
     yoyo: true,
     repeat: -1,
@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
                       gsap.to(logoWrapper, {
                         y: "-120%",
                         opacity: 0,
-                        duration: 0.8,
+                        duration: 0.7,
                         delay: 0.5,
                         ease: "back.in(1.4)",
                         onComplete: () => {
@@ -99,10 +99,10 @@ window.addEventListener("DOMContentLoaded", () => {
                     {
                       scale: 1,
                       rotation: -360,
-                      duration: 0.5,
+                      duration: 0.7,
                       ease: "power2.inOut",
                     },
-                    "<0.4"
+                    "<0.3"
                   );
 
                   tl.to(
@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
                       duration: 0.5,
                       ease: "power3.out",
                     },
-                    "<0.4"
+                    "<0.2"
                   );
                 },
               }
