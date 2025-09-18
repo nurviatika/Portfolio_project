@@ -81,8 +81,19 @@ function animateAbout() {
     "<0.3"
   );
 
+  // tl.from(
+  //   "#aboutMe-section img[src*='image-hero-about.png']",
+  //   {
+  //     y: 60,
+  //     opacity: 0,
+  //     duration: 0.6,
+  //     ease: "power2.out",
+  //     // rotate: -10,
+  //   },
+  //   "<0.3"
+  // );
   tl.from(
-    "#aboutMe-section img[src*='image-hero-about.png']",
+    "#aboutMe-section .image-about",
     {
       y: 60,
       opacity: 0,
