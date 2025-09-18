@@ -46,7 +46,7 @@ function animateLearning() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#learning-about",
-      start: "top 50%",
+      start: "top 60%",
       toggleActions: "play none none none",
       once: true,
     },
@@ -65,7 +65,7 @@ function animateLearning() {
     {
       x: -30,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.4,
       ease: "power2.out",
     },
     "<0.4"
@@ -76,46 +76,34 @@ function animateLearning() {
     {
       y: 30,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.2,
     },
-    "<0.4"
+    "<0.2"
   );
   tl.from(
     "#learning-about .vid-card2",
     {
       y: -30,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.2,
     },
-    "<0.4"
+    "<0.3"
   );
   tl.from(
     "#learning-about .vid-card3",
     {
       y: 30,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.4,
       ease: "power2.out",
       stagger: 0.2,
     },
-    "<0.4"
+    "<0.2"
   );
-
-  // tl.from(
-  //   "#learning-about p:not(.sub-text)",
-  //   {
-  //     x: -30,
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     ease: "power1.out",
-  //     stagger: 0.2,
-  //   },
-  //   "<0.5"
-  // );
 }
 
 function animateJoin() {
@@ -201,7 +189,7 @@ function animateTestimonial() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#testimonial-section",
-      start: "top 60%",
+      start: "top 80%",
       toggleActions: "play none none none",
     },
   });
@@ -233,7 +221,7 @@ function animateTestimonial() {
       duration: 0.5,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.2"
   );
   tl.from(
     "#testimonial-section .card-button",
@@ -244,7 +232,7 @@ function animateTestimonial() {
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -256,7 +244,7 @@ function animateTestimonial() {
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 }
 
@@ -264,7 +252,7 @@ function animateFooter() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "footer",
-      start: "top 55%",
+      start: "top 75%",
       toggleActions: "play none none none",
     },
   });
@@ -272,7 +260,7 @@ function animateFooter() {
   tl.from("footer .bg-white.rounded-full.items-center", {
     x: -40,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.4,
     ease: "power2.out",
   });
 
@@ -281,10 +269,10 @@ function animateFooter() {
     {
       x: -40,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -292,11 +280,11 @@ function animateFooter() {
     {
       x: -30,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -304,7 +292,7 @@ function animateFooter() {
     {
       scale: 0,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "back.out(1.7)",
       stagger: 0.1,
     },
@@ -316,7 +304,7 @@ function animateFooter() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -328,7 +316,7 @@ function animateFooter() {
     {
       x: 25,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
     "<0.2"
@@ -339,7 +327,7 @@ function animateFooter() {
     {
       x: 25,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
     "<0.2"
@@ -350,7 +338,7 @@ function animateFooter() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -362,10 +350,10 @@ function animateFooter() {
     {
       y: 50,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.1"
   );
 }
 

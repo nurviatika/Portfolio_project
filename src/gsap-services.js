@@ -46,7 +46,7 @@ function animateServicesNow() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#servicesNow-section",
-      start: "top 40%",
+      start: "top 50%",
       toggleActions: "play none none none",
       // markers: true,
     },
@@ -57,7 +57,7 @@ function animateServicesNow() {
     {
       y: 40,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.4,
       ease: "power3.out",
     },
     "<0.2"
@@ -70,7 +70,7 @@ function animateServicesNow() {
 
     gsap.to(obj, {
       val: end,
-      duration: 2,
+      duration: 1,
       ease: "power3.out",
       snap: { val: 1 },
       scrollTrigger: {
@@ -89,10 +89,10 @@ function animateServicesNow() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.4,
       ease: "power2.out",
     },
-    "<0.4"
+    "<0.3"
   );
 
   tl.from(
@@ -100,7 +100,7 @@ function animateServicesNow() {
     {
       y: 30,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.3,
       ease: "power2.out",
     },
     "<0.2"
@@ -202,7 +202,7 @@ function animateFaq() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#faq-section",
-      start: "top 50%",
+      start: "top 55%",
       toggleActions: "play none none none",
     },
   });
@@ -210,7 +210,7 @@ function animateFaq() {
   tl.from("#faq-section .text-faq p", {
     y: 30,
     opacity: 0,
-    duration: 0.7,
+    duration: 0.4,
     stagger: 0.1,
     ease: "power2.out",
   });
@@ -221,11 +221,11 @@ function animateFaq() {
       x: 40,
       top: "50%",
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       stagger: 0.2,
       ease: "power2.out",
     },
-    "<0.10"
+    "<0.4"
   );
 }
 
@@ -233,7 +233,7 @@ function animateTestimonial() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#testimonial-section",
-      start: "top 60%",
+      start: "top 80%",
       toggleActions: "play none none none",
     },
   });
@@ -265,7 +265,7 @@ function animateTestimonial() {
       duration: 0.5,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.2"
   );
   tl.from(
     "#testimonial-section .card-button",
@@ -276,7 +276,7 @@ function animateTestimonial() {
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -288,7 +288,7 @@ function animateTestimonial() {
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 }
 
@@ -296,7 +296,7 @@ function animateFooter() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "footer",
-      start: "top 55%",
+      start: "top 75%",
       toggleActions: "play none none none",
     },
   });
@@ -304,7 +304,7 @@ function animateFooter() {
   tl.from("footer .bg-white.rounded-full.items-center", {
     x: -40,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.4,
     ease: "power2.out",
   });
 
@@ -313,10 +313,10 @@ function animateFooter() {
     {
       x: -40,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -324,11 +324,11 @@ function animateFooter() {
     {
       x: -30,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
-    "<0.3"
+    "<0.2"
   );
 
   tl.from(
@@ -336,7 +336,7 @@ function animateFooter() {
     {
       scale: 0,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "back.out(1.7)",
       stagger: 0.1,
     },
@@ -348,7 +348,7 @@ function animateFooter() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -360,7 +360,7 @@ function animateFooter() {
     {
       x: 25,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
     "<0.2"
@@ -371,7 +371,7 @@ function animateFooter() {
     {
       x: 25,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
     "<0.2"
@@ -382,7 +382,7 @@ function animateFooter() {
     {
       y: 20,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
       stagger: 0.1,
     },
@@ -394,13 +394,12 @@ function animateFooter() {
     {
       y: 50,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     },
-    "<0.3"
+    "<0.1"
   );
 }
-
 document.addEventListener("preloadComplete", () => {
   if (document.querySelector("#hero-p")) animateHero();
   if (document.querySelector("#servicesNow-section")) animateServicesNow();
